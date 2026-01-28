@@ -44,5 +44,5 @@ if __name__ == "__main__":
     
     print(f"Partie ID: {ma_partie.id_partie}")
     print(f"Victoire: {ma_partie.est_gagne}")
-    print(f"Score calculé automatiquement: {ma_partie.score} points") 
+    print(f"Score calculé : {ma_partie.score} points") 
     # Devrait afficher 1000 points car (12-3+1)*100 = 1000

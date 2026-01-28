@@ -16,11 +16,6 @@ class VueJeu(VuePrincipale):
         
         super().__init__(root)
 
-    def dessiner_menu(self):
-        """Remplit la barre latérale à droite"""
-        tk.Label(self.zone_laterale, text="OPTIONS", font=("Arial", 12, "bold"), bg="#f0f0f0").pack(pady=20)
-        tk.Button(self.zone_laterale, text="Quitter", command=self.root.quit, bg="#e95e50", fg="white").pack(side="bottom", fill="x", padx=10, pady=10)
-
     def dessiner_jeu(self):
         """Crée le plateau de jeu (Rectangle marron, 12 lignes, boutons)"""
         # 1. Création du Canvas pour le plateau

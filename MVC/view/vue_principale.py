@@ -1,22 +1,31 @@
-from abc import ABC, abstractmethod
 import tkinter as tk
 
-class VuePrincipale(ABC):
-    def __init__(self, root):
+class VuePrincipale:
+    def __init__(self, root, controleur):
         self.root = root
+        self.controleur = controleur
+
+        self.zone_laterale = tk.Frame(self.root, bg="#2c3e50", width=200, height=600)
+        self.zone_laterale.pack(side="left", fill="y")
+        self.zone_laterale.pack_propagate(False) #
+        
+
         self.zone_centrale = tk.Frame(self.root, bg="white", width=600, height=600)
-        self.zone_centrale.pack(side="left", expand=True, fill="both")
-        self.zone_laterale = tk.Frame(self.root, bg="#f0f0f0", width=200, height=600)
-        self.zone_laterale.pack(side="right", fill="y")
-        self.dessiner_jeu()
-        self.dessiner_menu()
+        self.zone_centrale.pack(side="right", expand=True, fill="both")
 
-    @abstractmethod
-    def dessiner_jeu(self):
-        """Cette méthode doit être implémentée par la classe fille pour afficher le plateau."""
-        pass
+        self.dessiner_menu_permanent()
 
-    @abstractmethod
-    def dessiner_menu(self):
-        """Cette méthode doit être implémentée par la classe fille pour afficher les boutons."""
-        pass
+    def dessiner_menu_permanent(self):
+        tk.Label(self.zone_laterale, text="MASTERMIND", fg="white", bg="#2c3e50", 
+                 font=("Arial", 14, "bold"), pady=20).pack()
+        
+        # Les boutons appellent le contrôleur
+        tk.Button(self.zone_laterale, text="Jouer", 
+                  command=self.controleur.afficher_jeu).pack(fill="x", padx=10, pady=5)
+        
+        tk.Button(self.zone_laterale, text="Historique", 
+                  command=self.controleur.afficher_historique).pack(fill="x", padx=10, pady=5)
+
+    def nettoyer_zone_centrale(self):
+        for widget in self.zone_centrale.winfo_children():
+            widget.destroy()

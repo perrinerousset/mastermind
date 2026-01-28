@@ -1,26 +1,30 @@
 import tkinter as tk
-from mastermind import mastermind
-from vue_principale import VuePrincipale
-from vue_jeu import VueJeu
+from model.mastermind import mastermind
+from view.vue_principale import VuePrincipale
+from view.console import VueJeu
 class Controleur:
     def __init__(self):
         self.root = tk.Tk()
         self.root.title("Mastermind Projet")
         self.modele = mastermind()
         self.vue_principale = VuePrincipale(self.root, self)
+        
+        # Correction : On définit l'accueil
         self.afficher_accueil()
+        
         self.root.mainloop()
-
+        
     def afficher_accueil(self):
+        """Affiche le message de bienvenue par défaut"""
         self.vue_principale.nettoyer_zone_centrale()
-        tk.Label(self.vue_principale.zone_centrale, text="Bienvenue !\nChoisissez une option à gauche.",
+        tk.Label(self.vue_principale.zone_centrale, 
+                 text="Bienvenue dans le Mastermind !\nCliquez sur 'Jouer' pour commencer.",
                  font=("Arial", 16), bg="white").pack(expand=True)
 
     def afficher_jeu(self):
-        """Active la vue du plateau de jeu"""
         self.vue_principale.nettoyer_zone_centrale()
-        self.modele.Combinaison_secrete()
-        # On installe la VueJeu dans la zone centrale existante
+        # Correction : On génère la combinaison avant de lancer la vue
+        self.modele.Combinaison_secrete() 
         VueJeu(self.vue_principale.zone_centrale, self.modele)
 
     def afficher_historique(self):

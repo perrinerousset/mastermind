@@ -26,6 +26,9 @@ class VuePrincipale:
         tk.Button(self.zone_laterale, text="Historique", 
                   command=self.controleur.afficher_historique).pack(fill="x", padx=10, pady=5)
 
+        tk.Button(self.zone_laterale, text="Règles du jeu", 
+                  command=self.controleur.afficher_regles).pack(fill="x", padx=10, pady=5)
+
     def nettoyer_zone_centrale(self):
         for widget in self.zone_centrale.winfo_children():
             widget.destroy()

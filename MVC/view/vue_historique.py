@@ -12,7 +12,7 @@ class VueHistorique:
         self.frame_principale.pack(fill="both", expand=True)
 
        
-        tk.Label(self.frame_principale, text="📜 HISTORIQUE DES SCORES", 
+        tk.Label(self.frame_principale, text="HISTORIQUE DES SCORES", 
                  font=("Helvetica", 20, "bold"), bg="white", fg="#2c3e50", pady=20).pack()
 
         

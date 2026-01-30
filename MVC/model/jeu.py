@@ -25,10 +25,10 @@ class Jeu:
             self.score = 0
             
     def sauvegarder_partie(self):
-        donnees = {
-            "id": self.id_partie,
+        return {
+            "id": self.get_id_partie(),
             "score": self.score,
-            "tentatives": self.nb_tentatives,
-            "victoire": self.est_gagne
+            "tentatives": self.get_nb_tentatives(),
+            "victoire": self.get_est_gagnee()
         }
-        return donnees
+    

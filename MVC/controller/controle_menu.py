@@ -5,6 +5,7 @@ from view.console import VueJeu
 from view.vue_historique import VueHistorique
 from view.vue_regles_jeu import VueReglesJeu
 from model.jeu import Jeu
+from model.historique import historique
 
 class Controleur:
     def __init__(self):
@@ -14,6 +15,7 @@ class Controleur:
         self.vue_principale = VuePrincipale(self.root, self)
         self.partie_objet = None  
         self.vue_jeu_active = None 
+        self.gestionnaire_historique = historique()
         self.historique_parties = []
         self.compteur_id = 1
         self.afficher_accueil()   
@@ -26,6 +28,7 @@ class Controleur:
 
     def nouvelle_partie(self):
             if self.partie_objet:
+                self.gestionnaire_historique.ajouter_au_fichier(self.partie_objet)
                 self.historique_parties.append(self.partie_objet)
             if self.vue_jeu_active:
                     self.vue_jeu_active.frame_principale.destroy()

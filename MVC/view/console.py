@@ -2,9 +2,16 @@ import tkinter as tk
 from tkinter import messagebox
 
 class VueJeu:
-    def __init__(self, parent_frame, modele):
+    def __init__(self, parent_frame, modele, controleur):
         self.parent = parent_frame
         self.modele = modele
+        self.controleur = controleur 
+        self.frame_principale = tk.Frame(self.parent, bg="white")
+        self.frame_principale.pack(expand=True, fill="both")
+        self.zone_message = tk.Label(self.frame_principale, text="Bonne chance !", bg="#EEE8AA", font=("Arial", 12, "bold"), relief="solid", bd=2, padx=10, pady=5)
+        self.zone_message.pack(pady=(10, 0))
+        self.canvas = tk.Canvas(self.frame_principale, bg="#8B4513", width=500, height=580)
+        self.canvas.pack(pady=10)
         self.couleurs = self.modele.ListeCouleur
         self.ligne_actuelle = 0
         self.etat_pions = [[self.couleurs[0] for _ in range(4)] for _ in range(12)]
@@ -13,20 +20,17 @@ class VueJeu:
         self.resultats_graphiques = [] 
         self.hauteur_ligne = 45
         self.offset_y = 20
-        self.parent = parent_frame
-        self.modele = modele
-        self.controleur = controleur
-        self.canvas = tk.Canvas(self.parent, bg="#8B4513", width=500, height=580, highlightthickness=0)
-        self.canvas.pack(pady=10)
-        self.dessiner_nouvelle_ligne(0)#on dessine la première ligne au démarrage 
+        self.dessiner_nouvelle_ligne(0)
+
+        self.btn_nouveau = tk.Button(self.frame_principale, text="Nouvelle Partie", command=self.controleur.nouvelle_partie, bg="#2ecc71", fg="white", font=("Arial", 10, "bold"))
+        self.btn_nouveau.pack(pady=10)
 
     def redessiner_sur_parent(self, nouveau_parent):
-        self.parent = nouveau_parent
-        self.canvas.pack(in_=self.parent, pady=10)
+        self.frame_principale.pack(in_=nouveau_parent, expand=True, fill="both")
 
     def dessiner_nouvelle_ligne(self, i):
         y_ligne = self.offset_y + (i * self.hauteur_ligne)
-        btn = tk.Button(self.parent, text="Valider", state="normal",disabledforeground="gray70", command=lambda l=i: self.valider_ligne(l)) #pas de fonction pour grisé automatiquement donc j'ai mit du gris 
+        btn = tk.Button(self.canvas, text="Valider", state="normal", disabledforeground="gray70", command=lambda l=i: self.valider_ligne(l))
         self.canvas.create_window(50, y_ligne + 20, window=btn)
         self.boutons_valider.append(btn)
 
@@ -74,10 +78,29 @@ class VueJeu:
             self.canvas.tag_unbind(pion_id, "<Button-1>")
         
         if self.modele.victoire(proposition):#vérification de la victoire à chaque fois qu'on valide une ligne
-            messagebox.showinfo("BRAVO !", f"Victoire en {ligne + 1} essais !")
+            self.message("victoire")
             return
         self.ligne_actuelle += 1# Passage à la ligne suivante
         if self.ligne_actuelle < 12:
             self.dessiner_nouvelle_ligne(self.ligne_actuelle)
+            self.message("tentative")
         else:
-            messagebox.showwarning("PERDU", "Vous avez utilisé vos 12 essais !")
+            self.message("perdu")
+
+    def message(self, etat):
+            etat = etat.lower()
+            if etat == "victoire":
+                tentatives = self.ligne_actuelle + 1
+                texte = f"VICTOIRE ! Gagné en {tentatives} tentative(s) !"
+                couleur = "#90EE90"
+            elif etat == "tentative":
+                restantes = 12 - self.ligne_actuelle
+                texte = f"Il vous reste {restantes} tentative(s)"
+                couleur = "#EEE8AA"
+            elif etat == "perdu":
+                texte = "PERDU ! La solution était :" # à rajouté ! mettre la solution !! 
+                couleur = "#F08080"
+            else:
+                texte = "À vous de jouer !"
+                couleur = "#EEE8AA"
+            self.zone_message.config(text=texte, bg=couleur)

@@ -4,6 +4,7 @@ from view.vue_principale import VuePrincipale
 from view.console import VueJeu
 from view.vue_historique import VueHistorique
 from view.vue_regles_jeu import VueReglesJeu
+from model.jeu import Jeu
 
 class Controleur:
     def __init__(self):
@@ -13,6 +14,8 @@ class Controleur:
         self.vue_principale = VuePrincipale(self.root, self)
         self.partie_objet = None  
         self.vue_jeu_active = None 
+        self.historique_parties = []
+        self.compteur_id = 1
         self.afficher_accueil()   
         self.root.mainloop()
         
@@ -22,20 +25,25 @@ class Controleur:
 
 
     def nouvelle_partie(self):
-        self.vue_principale.nettoyer_zone_centrale()
-        self.modele.Combinaison_secrete()
-        id_p = 1 
-        self.partie_objet = Jeu(id_partie=id_p)
-        self.vue_jeu_active = VueJeu(self.vue_principale.zone_centrale, self.modele, self)
-        
+            if self.partie_objet:
+                self.historique_parties.append(self.partie_objet)
+            if self.vue_jeu_active:
+                    self.vue_jeu_active.frame_principale.destroy()
+                    self.vue_jeu_active = None
+            self.vue_principale.nettoyer_zone_centrale()
+            self.modele.Combinaison_secrete() 
+            self.partie_objet = Jeu(id_partie=self.compteur_id)
+            self.compteur_id += 1
+            self.vue_jeu_active = VueJeu(self.vue_principale.zone_centrale, self.modele, self)
+                    
     def afficher_jeu(self):
         self.vue_principale.nettoyer_zone_centrale()
         if self.vue_jeu_active:
             self.vue_jeu_active.redessiner_sur_parent(self.vue_principale.zone_centrale)
         else:
             self.nouvelle_partie()
-        self.modele.Combinaison_secrete() 
-        VueJeu(self.vue_principale.zone_centrale, self.modele)
+        if self.vue_jeu_active is None:
+            self.nouvelle_partie()
 
     def afficher_historique(self):
         self.vue_principale.nettoyer_zone_centrale()

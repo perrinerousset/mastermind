@@ -31,4 +31,7 @@ class VuePrincipale:
 
     def nettoyer_zone_centrale(self):
         for widget in self.zone_centrale.winfo_children():
-            widget.destroy()
+            if self.controleur.vue_jeu_active and widget == self.controleur.vue_jeu_active.frame_principale:
+                widget.pack_forget()
+            else:
+                widget.destroy()

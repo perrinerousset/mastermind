@@ -31,26 +31,29 @@ class Controleur:
 
 
     def nouvelle_partie(self):
-            if self.partie_objet:
-                try:
-                    self.gestionnaire_historique.ajouter_au_fichier(self.partie_objet)
-                except Exception as e:
-                    print(f"Erreur sauvegarde : {e}")
+        
+        if self.partie_objet:
+            try:
+                self.gestionnaire_historique.ajouter_au_fichier(self.partie_objet)
+            except Exception as e:
+                print(f"Erreur lors de l'archivage : {e}")
 
-            if self.vue_jeu_active:
-                try:
-                    self.vue_jeu_active.frame_principale.destroy()
-                except:
-                    pass
-                self.vue_jeu_active = None
-                
-            self.vue_principale.nettoyer_zone_centrale()
-
-            self.modele.Combinaison_secrete() 
-            self.partie_objet = Jeu(id_partie=self.compteur_id)
-            self.compteur_id += 1
-
-            self.vue_jeu_active = VueJeu(self.vue_principale.zone_centrale, self.modele, self)
+        
+        if self.vue_jeu_active:
+            self.vue_jeu_active.frame_principale.destroy()
+            self.vue_jeu_active = None
+        
+        self.vue_principale.nettoyer_zone_centrale()
+        self.modele.Combinaison_secrete() 
+        
+        historique_actuel = self.gestionnaire_historique.charger_historique()
+        nouvel_id = len(historique_actuel) + 1
+        
+        
+        self.partie_objet = Jeu(id_partie=nouvel_id)
+        
+       
+        self.vue_jeu_active = VueJeu(self.vue_principale.zone_centrale, self.modele, self)
                     
     def afficher_jeu(self):
         if self.vue_jeu_active:

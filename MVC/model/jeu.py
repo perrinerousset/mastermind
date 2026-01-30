@@ -38,9 +38,9 @@ class Jeu:
             
     def sauvegarder_partie(self):
         return {
-            "id": self.get_id_partie,
-            "score": self.score,
-            "tentatives": self.get_nb_tentatives,
-            "victoire": self.get_est_gagne
+            "id": self.get_id_partie(),
+            "score": self.get_score(),
+            "tentatives": self.get_nb_tentatives(),
+            "victoire": self.get_est_gagne()
         }
         

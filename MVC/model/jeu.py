@@ -29,6 +29,6 @@ class Jeu:
             "id": self.get_id_partie(),
             "score": self.score,
             "tentatives": self.get_nb_tentatives(),
-            "victoire": self.get_est_gagnee()
+            "victoire": self.get_est_gagne()
         }
     

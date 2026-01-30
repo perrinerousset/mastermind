@@ -32,7 +32,6 @@ class Controleur:
             if self.partie_objet:
                 try:
                     self.gestionnaire_historique.ajouter_au_fichier(self.partie_objet)
-                    self.historique_parties.append(self.partie_objet)
                 except Exception as e:
                     print(f"Erreur sauvegarde : {e}")
 

@@ -18,7 +18,7 @@ class Controleur:
         self.vue_jeu_active = None 
         self.gestionnaire_historique = historique()
         self.historique_parties = []
-        self.compteur_id = 1
+        self.compteur_id = len(parties_existantes) + 1
 
         self.afficher_accueil()
         self.root.mainloop()

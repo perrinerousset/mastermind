@@ -18,6 +18,8 @@ class VueJeu:
         self.canvas = tk.Canvas(self.parent, bg="#8B4513", width=500, height=580, highlightthickness=0)
         self.canvas.pack(pady=10)
         self.dessiner_nouvelle_ligne(0)
+        self.zone_message = tk.Label(self.parent,text="Bonne chance !",bg="#EEE8AA",fg="black",font=("Arial", 12, "bold"),relief="solid",bd=2,padx=10,pady=5)
+        self.zone_message.pack(pady=(10, 0))
 
     def redessiner_sur_parent(self, nouveau_parent):
             self.parent = nouveau_parent
@@ -76,10 +78,28 @@ class VueJeu:
             self.canvas.tag_unbind(pion_id, "<Button-1>")
         
         if self.modele.victoire(proposition):#vérification de la victoire à chaque fois qu'on valide une ligne
-            messagebox.showinfo("BRAVO !", f"Victoire en {ligne + 1} essais !")
+            self.message("victoire")
             return
         self.ligne_actuelle += 1# Passage à la ligne suivante
         if self.ligne_actuelle < 12:
             self.dessiner_nouvelle_ligne(self.ligne_actuelle)
+            self.message("Tentative")
         else:
-            messagebox.showwarning("PERDU", "Vous avez utilisé vos 12 essais !")
+            self.message("Perdu")
+
+    def message(self, etat):
+        if etat == "victoire":
+            tentatives = self.ligne_actuelle + 1
+            texte = f"Vous avez gagné en {tentatives} tentative(s) !"
+            couleur = "#90EE90"
+        elif etat == "tentative":
+            restantes = 11 - self.ligne_actuelle
+            texte = f"Il vous reste {restantes} tentative(s)"
+            couleur = "#EEE8AA"
+        elif etat == "perdu":
+            texte = "Vous avez perdu ! Réessayez !"
+            couleur = "#F08080"
+        else:
+            texte = ""
+            couleur = "#EEE8AA"
+        self.zone_message.config(text=texte, bg=couleur)

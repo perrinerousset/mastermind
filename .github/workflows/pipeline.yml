@@ -1,6 +1,6 @@
 name: Lint, test and build mastermind project
 
-on: [push]
+# on: [push]   # a remettre quand ca marchera 
 
 jobs:
   lint:

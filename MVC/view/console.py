@@ -13,10 +13,16 @@ class VueJeu:
         self.resultats_graphiques = [] 
         self.hauteur_ligne = 45
         self.offset_y = 20
-        
+        self.parent = parent_frame
+        self.modele = modele
+        self.controleur = controleur
         self.canvas = tk.Canvas(self.parent, bg="#8B4513", width=500, height=580, highlightthickness=0)
         self.canvas.pack(pady=10)
         self.dessiner_nouvelle_ligne(0)#on dessine la première ligne au démarrage 
+
+    def redessiner_sur_parent(self, nouveau_parent):
+        self.parent = nouveau_parent
+        self.canvas.pack(in_=self.parent, pady=10)
 
     def dessiner_nouvelle_ligne(self, i):
         y_ligne = self.offset_y + (i * self.hauteur_ligne)

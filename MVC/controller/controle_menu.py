@@ -57,7 +57,7 @@ class Controleur:
     def enregistrer_partie(self, victoire: bool, tentatives : int):
         if not self.partie_objet:
             return
-        self.terminer_parties(victoire, tentatives)
+        self.partie_objet.terminer_partie(victoire, tentatives)
         historique().ajouter_au_fichier(self.partie_objet)
 
 if __name__ == "__main__":

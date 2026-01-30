@@ -3,7 +3,8 @@ import os
 
 class historique:
     def __init__(self, filename="historique.json"):
-        self.filename = filename
+        base_dir = os.path.dirname(__file__)
+        self.filename = os.path.join(base_dir, filename)
 
     def ajouter_au_fichier(self, objet_jeu):
         """

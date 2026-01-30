@@ -1,4 +1,4 @@
-from .score import Score
+from model.score import Score
 
 class Jeu:
     def __init__(self, id_partie, nb_tentatives=0, est_gagne=False):
@@ -14,21 +14,33 @@ class Jeu:
     def get_nb_tentatives(self): 
         return self.__nb_tentatives
     def get_est_gagnee(self): 
-        return self.__est_gagne    
+        return self.__est_gagne  
+    def score(self): 
+        return self.__score
+
+
+    def set_nb_tentatives(self, v:int):
+        self.__nb_tentatives = v
+        return self.__nb_tentatives
+    
+    def set_est_gagne(self, v:bool):
+        self.__est_gagne = v
+        return self.__est_gagne
+
     
     def terminer_partie(self, a_gagne, nb_tours_finaux):
-        self.est_gagne = a_gagne
-        self.nb_tentatives = nb_tours_finaux
-        if self.est_gagne:
-            self.score = self.gestionnaire_score.calculer(nb_tours_finaux)
-        else:
-            self.score = 0
+        self.est_gagne (a_gagne)
+        self.nb_tentatives (nb_tours_finaux)
+    
+        self.score = self.gestionnaire_score.calculer(nb_tours_finaux) if a_gagne else 0
+        return self.__score
+        
             
     def sauvegarder_partie(self):
-        donnees = {
+        return {
             "id": self.id_partie,
             "score": self.score,
             "tentatives": self.nb_tentatives,
             "victoire": self.est_gagne
         }
-        return donnees
+        

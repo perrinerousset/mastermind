@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox
+from model.historique import historique
 
 class VueJeu:
     def __init__(self, parent_frame, modele, controleur):
@@ -78,6 +79,7 @@ class VueJeu:
             self.canvas.tag_unbind(pion_id, "<Button-1>")
         
         if self.modele.victoire(proposition):#vérification de la victoire à chaque fois qu'on valide une ligne
+            self.controleur.enregistrer_partie(True, ligne+1)
             self.message("victoire")
             return
         self.ligne_actuelle += 1# Passage à la ligne suivante
@@ -85,6 +87,7 @@ class VueJeu:
             self.dessiner_nouvelle_ligne(self.ligne_actuelle)
             self.message("tentative")
         else:
+            self.controleur.enregistrer_partie(False, 12)
             self.message("perdu")
 
     def message(self, etat):

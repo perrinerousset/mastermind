@@ -3,7 +3,8 @@ import os
 
 class historique:
     def __init__(self, filename="historique.json"):
-        self.filename = filename
+        base_dir = os.path.dirname(__file__)
+        self.filename = os.path.join(base_dir, filename)
 
     def ajouter_au_fichier(self, objet_jeu):
         """
@@ -21,7 +22,7 @@ class historique:
         with open(self.filename, "w", encoding="utf-8") as f:
             json.dump(donnees_globales, f, indent=4, ensure_ascii=False)
         
-        print(f"Partie {objet_jeu.id_partie} enregistrée dans l'historique.")
+        print(f"Partie {donnees_partie.get('id','?')} enregistrée dans l'historique.")
 
     def charger_historique(self):
         if not os.path.exists(self.filename):

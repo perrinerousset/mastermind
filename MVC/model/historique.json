@@ -1,0 +1,14 @@
+[
+    {
+        "id": 1,
+        "score": 0,
+        "tentatives": 12,
+        "victoire": false
+    },
+    {
+        "id": 2,
+        "score": 300,
+        "tentatives": 10,
+        "victoire": true
+    }
+]

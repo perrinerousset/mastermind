@@ -5,6 +5,7 @@ from view.console import VueJeu
 from view.vue_historique import VueHistorique
 from view.vue_regles_jeu import VueReglesJeu
 from model.jeu import Jeu
+from model.historique import historique
 
 class Controleur:
     def __init__(self):
@@ -52,6 +53,12 @@ class Controleur:
     def afficher_regles(self):
         self.vue_principale.nettoyer_zone_centrale()
         VueReglesJeu(self.vue_principale.zone_centrale, self.modele)
+    
+    def enregistrer_partie(self, victoire: bool, tentatives : int):
+        if not self.partie_objet:
+            return
+        self.partie_objet.terminer_partie(victoire, tentatives)
+        historique().ajouter_au_fichier(self.partie_objet)
 
 if __name__ == "__main__":
     Controleur()

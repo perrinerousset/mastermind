@@ -21,7 +21,7 @@ class historique:
         with open(self.filename, "w", encoding="utf-8") as f:
             json.dump(donnees_globales, f, indent=4, ensure_ascii=False)
         
-        print(f"Partie {objet_jeu.id_partie} enregistrée dans l'historique.")
+        print(f"Partie {donnees_partie.get('id','?')} enregistrée dans l'historique.")
 
     def charger_historique(self):
         if not os.path.exists(self.filename):

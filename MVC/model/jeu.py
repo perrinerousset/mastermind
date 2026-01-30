@@ -13,7 +13,7 @@ class Jeu:
         return self.__id_partie
     def get_nb_tentatives(self): 
         return self.__nb_tentatives
-    def get_est_gagnee(self): 
+    def get_est_gagne(self): 
         return self.__est_gagne  
     def score(self): 
         return self.__score
@@ -38,9 +38,9 @@ class Jeu:
             
     def sauvegarder_partie(self):
         return {
-            "id": self.id_partie,
+            "id": self.get_id_partie,
             "score": self.score,
-            "tentatives": self.nb_tentatives,
-            "victoire": self.est_gagne
+            "tentatives": self.get_nb_tentatives,
+            "victoire": self.get_est_gagne
         }
         

@@ -34,8 +34,8 @@ class Controleur:
                 try:
                     self.gestionnaire_historique.ajouter_au_fichier(self.partie_objet)
                     self.historique_parties.append(self.partie_objet)
-            except Exception as e:
-                print(f"Erreur sauvegarde : {e}")
+                except Exception as e:
+                    print(f"Erreur sauvegarde : {e}")
 
             if self.vue_jeu_active:
                 try:

@@ -1,26 +1,26 @@
 import tkinter as tk
 
-
 class VueReglesJeu:
     def __init__(self, parent, modele_jeu=None):
         self.parent = parent
         self.frame_principale = tk.Frame(self.parent, bg="white")
         self.frame_principale.pack(fill="both", expand=True)
-
-       
-        tk.Label(self.frame_principale, text="REGLES DU JEU", 
-                 font=("Helvetica", 20, "bold"), bg="white", fg="#2c3e50", pady=20).pack()
-
-        
-        self.liste_frame = tk.Frame(self.frame_principale, bg="white")
-        self.liste_frame.pack(fill="both", expand=True, padx=40, pady=10)
-
+        self.contenu_centre = tk.Frame(self.frame_principale, bg="white", relief="ridge", bd=2, padx=30, pady=30)
+        self.contenu_centre.place(relx=0.5, rely=0.5, anchor="center") # Centrage au milieu 
+        tk.Label(self.contenu_centre, text="RÈGLES DU JEU", 
+                 font=("Helvetica", 22, "bold"), bg="white", fg="#2c3e50").pack(pady=(0, 20))
         regles_texte = (
-            "1. Le but est blabla.\n"
-            "2. ensuite :\n"
-            "   couleurs rouges.\n"
-            "   couleur blanc.\n"
-            "3. tant d'essais !"
+            "BUT DU JEU :\n"
+            "Découvrir la combinaison secrète de 4 pions colorés choisie par l'ordinateur.\n\n"
+            " DÉROULEMENT :\n"
+            "À chaque tour, proposez une combinaison sur la ligne active.\n"
+            "Après validation, des indices s'affichent à droite :\n\n"
+            "Pion Rouge : Une couleur est correcte et bien placée.\n"
+            "Pion Blanc : Une couleur est correcte mais mal placée.\n\n"
+            "CONDITIONS :\n"
+            "Vous avez un maximum de 12 tentatives pour gagner.\n"
+            "Plus vous trouvez vite, plus votre score est élevé !"
         )
-        tk.Label(self.frame_principale, text=regles_texte, justify="left", wraplength=550).pack(pady=10)
+        self.label_regles = tk.Label(self.contenu_centre, text=regles_texte, justify="left", font=("Arial", 12),bg="white", fg="#34495e",wraplength=500)
+        self.label_regles.pack()
    

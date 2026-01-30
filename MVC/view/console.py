@@ -78,6 +78,7 @@ class VueJeu:
             self.canvas.tag_unbind(pion_id, "<Button-1>")
         
         if self.modele.victoire(proposition):#vérification de la victoire à chaque fois qu'on valide une ligne
+            self.controleur.partie_objet.terminer_partie(True, self.ligne_actuelle + 1)
             self.message("victoire")
             return
         self.ligne_actuelle += 1# Passage à la ligne suivante
@@ -85,6 +86,7 @@ class VueJeu:
             self.dessiner_nouvelle_ligne(self.ligne_actuelle)
             self.message("tentative")
         else:
+            self.controleur.partie_objet.terminer_partie(False, 12)
             self.message("perdu")
 
     def message(self, etat):

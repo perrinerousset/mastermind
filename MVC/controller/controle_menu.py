@@ -28,25 +28,19 @@ class Controleur:
 
     def nouvelle_partie(self):
             if self.partie_objet:
-                try:
-                    if hasattr(self, 'gestionnaire_historique'):
-                        self.gestionnaire_historique.ajouter_au_fichier(self.partie_objet)
-                    self.historique_parties.append(self.partie_objet)
-                except Exception as e:
-                    print(f"Note: Sauvegarde ignorée ou erreur : {e}")
+                from model.historique import historique
+                h = historique()
+                h.ajouter_au_fichier(self.partie_objet)
 
             if self.vue_jeu_active:
-                try:
-                    self.vue_jeu_active.frame_principale.destroy()
-                except:
-                    pass
+                self.vue_jeu_active.frame_principale.destroy()
                 self.vue_jeu_active = None
 
             self.vue_principale.nettoyer_zone_centrale()
             self.modele.Combinaison_secrete() 
             self.partie_objet = Jeu(id_partie=self.compteur_id)
             self.compteur_id += 1
-            from view.console import VueJeu
+           
             self.vue_jeu_active = VueJeu(self.vue_principale.zone_centrale, self.modele, self)
                     
     def afficher_jeu(self):

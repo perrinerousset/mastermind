@@ -20,7 +20,6 @@ class Controleur:
         self.historique_parties = []
         self.compteur_id = 1
 
-        self.vue_principale = VuePrincipale(self.root, self) 
         self.afficher_accueil()
         self.root.mainloop()
         

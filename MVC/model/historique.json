@@ -64,5 +64,11 @@
         "score": 0,
         "tentatives": 0,
         "victoire": false
+    },
+    {
+        "id": 1,
+        "score": 0,
+        "tentatives": 0,
+        "victoire": false
     }
 ]

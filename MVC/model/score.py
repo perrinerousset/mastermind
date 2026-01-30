@@ -2,6 +2,9 @@ class Score:
     def __init__(self):  
         self.__valeur_score = 0
         self.__tentatives_max = 12
+
+    def get_valeur_score(self):
+        return self.__valeur_score
     
     def calculer(self, nb_tentatives):
         #Si le joueur trouve en 1 tour : 1200 points.

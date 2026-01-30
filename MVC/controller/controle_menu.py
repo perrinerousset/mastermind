@@ -4,6 +4,7 @@ from view.vue_principale import VuePrincipale
 from view.console import VueJeu
 from view.vue_historique import VueHistorique
 from view.vue_regles_jeu import VueReglesJeu
+from model.jeu import Jeu
 
 class Controleur:
     def __init__(self):
@@ -34,8 +35,6 @@ class Controleur:
             self.vue_jeu_active.redessiner_sur_parent(self.vue_principale.zone_centrale)
         else:
             self.nouvelle_partie()
-        self.modele.Combinaison_secrete() 
-        VueJeu(self.vue_principale.zone_centrale, self.modele)
 
     def afficher_historique(self):
         self.vue_principale.nettoyer_zone_centrale()

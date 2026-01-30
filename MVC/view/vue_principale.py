@@ -30,5 +30,8 @@ class VuePrincipale:
                   command=self.controleur.afficher_regles).pack(fill="x", padx=10, pady=5)
 
     def nettoyer_zone_centrale(self):
-        for widget in self.zone_centrale.winfo_children():
-            widget.destroy()
+            for widget in self.zone_centrale.winfo_children():
+                if self.controleur.vue_jeu_active and widget == self.controleur.vue_jeu_active.canvas:
+                    widget.pack_forget()
+                else:
+                    widget.destroy()

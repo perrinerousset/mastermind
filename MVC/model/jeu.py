@@ -1,4 +1,4 @@
-from score import Score
+from .score import Score
 
 class Jeu:
     def __init__(self, id_partie, nb_tentatives=0, est_gagne=False):
@@ -6,7 +6,7 @@ class Jeu:
         self.__nb_tentatives = nb_tentatives
         self.__est_gagne = est_gagne
         self.gestionnaire_score = Score() 
-        self.score = self.gestionnaire_score.valeur_score
+        self.score = self.gestionnaire_score.get_valeur_score()
 
         #je met les gets vue que c'est private 
     def get_id_partie(self): 

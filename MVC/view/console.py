@@ -2,9 +2,10 @@ import tkinter as tk
 from tkinter import messagebox
 
 class VueJeu:
-    def __init__(self, parent_frame, modele):
+    def __init__(self, parent_frame, modele, controleur): # Ajoutez controleur ici
         self.parent = parent_frame
         self.modele = modele
+        self.controleur = controleur # Important pour communiquer avec le controleur
         self.couleurs = self.modele.ListeCouleur
         self.ligne_actuelle = 0
         self.etat_pions = [[self.couleurs[0] for _ in range(4)] for _ in range(12)]
@@ -13,20 +14,21 @@ class VueJeu:
         self.resultats_graphiques = [] 
         self.hauteur_ligne = 45
         self.offset_y = 20
-        self.parent = parent_frame
-        self.modele = modele
-        self.controleur = controleur
+        
         self.canvas = tk.Canvas(self.parent, bg="#8B4513", width=500, height=580, highlightthickness=0)
         self.canvas.pack(pady=10)
-        self.dessiner_nouvelle_ligne(0)#on dessine la première ligne au démarrage 
+        self.dessiner_nouvelle_ligne(0)
 
     def redessiner_sur_parent(self, nouveau_parent):
-        self.parent = nouveau_parent
-        self.canvas.pack(in_=self.parent, pady=10)
+            self.parent = nouveau_parent
+            if self.canvas.winfo_exists():
+                self.canvas.pack(in_=self.parent, pady=10)
+            else:
+                print("Erreur : Le canvas a été détruit ")#pour le debug là 
 
     def dessiner_nouvelle_ligne(self, i):
         y_ligne = self.offset_y + (i * self.hauteur_ligne)
-        btn = tk.Button(self.parent, text="Valider", state="normal",disabledforeground="gray70", command=lambda l=i: self.valider_ligne(l)) #pas de fonction pour grisé automatiquement donc j'ai mit du gris 
+        btn = tk.Button(self.canvas, text="Valider", state="normal", disabledforeground="gray70", command=lambda l=i: self.valider_ligne(l))
         self.canvas.create_window(50, y_ligne + 20, window=btn)
         self.boutons_valider.append(btn)
 

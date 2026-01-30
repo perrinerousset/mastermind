@@ -17,9 +17,9 @@ class Jeu:
         return self.__est_gagne    
     
     def terminer_partie(self, a_gagne, nb_tours_finaux):
-        self.est_gagne = a_gagne
-        self.nb_tentatives = nb_tours_finaux
-        if self.est_gagne:
+        self.__est_gagne = a_gagne
+        self.__nb_tentatives = nb_tours_finaux
+        if self.__est_gagne:
             self.score = self.gestionnaire_score.calculer(nb_tours_finaux)
         else:
             self.score = 0

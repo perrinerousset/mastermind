@@ -13,12 +13,14 @@ class Controleur:
         self.root.title("Mastermind Projet")
 
         self.modele = mastermind()
-        self.vue_principale = VuePrincipale(self.root, self)
+        
         self.partie_objet = None  
         self.vue_jeu_active = None 
         self.gestionnaire_historique = historique()
         self.historique_parties = []
+        parties_existantes = self.gestionnaire_historique.charger_historique()
         self.compteur_id = len(parties_existantes) + 1
+        self.vue_principale = VuePrincipale(self.root, self)
 
         self.afficher_accueil()
         self.root.mainloop()

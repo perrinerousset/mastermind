@@ -1,0 +1,23 @@
+[project]
+name = "mastermind"
+version = "0.1.0"
+description = "Mastermind game application"
+authors = [{ name = "Dubouloz Noémie, Rousset Perrine, Blanchard Victoria", email = "victoria.blanchard@insa-strasbourg.fr " }]
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "BSD-3-Clause" }
+classifiers = ["Programming Language :: Python :: 3"]
+
+dependencies = [
+    "tkinter",
+    "json",
+    "os" 
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+dev = ["ruff"]
+
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"

@@ -8,10 +8,20 @@
 
 
 import random
+from enum import Enum
+
+class Couleur(Enum):
+    BLEU = "#0cb2af"
+    VERT = "#a1c65d"
+    JAUNE = "#fac723"
+    ORANGE = "#f29222"
+    ROUGE = "#e95e50"
+    VIOLET = "#936fac"
+
 class mastermind : 
 
     def __init__(self): 
-        self.__ListeCouleur = ("#0cb2af","#a1c65d","#fac723","#f29222","#e95e50","#936fac")
+        self.__ListeCouleur = list(Couleur)
         self.__CombinaisonSecrete = []
     
     

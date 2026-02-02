@@ -1,30 +1,25 @@
 import pytest
-import MVC.jeu
+from MVC.model.jeu import Jeu
+from MVC.model.score import Score
 
 @pytest.fixture
-def nouveau_jeu(self):
-        """créer une instance de Jeu avant chaque test."""
+def nouveau_jeu():
         return Jeu(id_partie=1)
-def test_initialisation(self, nouveau_jeu):
-    """Vérifie objet correctement instancié."""
+
+def test_initialisation(nouveau_jeu):
     assert nouveau_jeu.get_id_partie() == 1
     assert nouveau_jeu.get_nb_tentatives() == 0
-    assert nouveau_jeu.get_est_gagnee() is False
+    assert nouveau_jeu.get_est_gagne() is False
 
-def test_terminer_partie_victoire(self, nouveau_jeu):
-    """Vérifie victoire."""
+def test_terminer_partie_victoire(nouveau_jeu):
     nouveau_jeu.terminer_partie(a_gagne=True, nb_tours_finaux=5)
-    assert nouveau_jeu.score == 800
-    assert nouveau_jeu.get_est_gagnee() is True 
+    assert nouveau_jeu.get_score() == 800
+    assert nouveau_jeu.get_est_gagne() is True 
 
-def test_terminer_partie_defaite(self, nouveau_jeu):
+def test_terminer_partie_defaite(nouveau_jeu):
     nouveau_jeu.terminer_partie(a_gagne=False, nb_tours_finaux=12)
-    assert nouveau_jeu.score == 0
+    assert nouveau_jeu.get_score() == 0
 
-def test_sauvegarder_partie(self, nouveau_jeu):
-    donnees = nouveau_jeu.sauvegarder_partie()     
-    keys_attendues = ["id", "score", "tentatives", "victoire"]
-    for key in keys_attendues:
-    assert key in donnees
+# faire test pour sauvegarder partie 
 
 

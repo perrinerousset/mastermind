@@ -10,5 +10,47 @@
         "score": 300,
         "tentatives": 10,
         "victoire": true
+    },
+    {
+        "id": 1,
+        "score": 0,
+        "tentatives": 12,
+        "victoire": false
+    },
+    {
+        "id": 2,
+        "score": 400,
+        "tentatives": 9,
+        "victoire": true
+    },
+    {
+        "id": 1,
+        "score": 0,
+        "tentatives": 12,
+        "victoire": false
+    },
+    {
+        "id": 1,
+        "score": 0,
+        "tentatives": 12,
+        "victoire": false
+    },
+    {
+        "id": 2,
+        "score": 0,
+        "tentatives": 12,
+        "victoire": false
+    },
+    {
+        "id": 3,
+        "score": 300,
+        "tentatives": 10,
+        "victoire": true
+    },
+    {
+        "id": 4,
+        "score": 600,
+        "tentatives": 7,
+        "victoire": true
     }
 ]

@@ -8,7 +8,7 @@ class Score:
     
     def calculer(self, nb_tentatives):
         #Si le joueur trouve en 1 tour : 1200 points.
-        #Si le joueur trouve en 12 tours : 100 point. bref c'est 1200 -100*tentatives
+        #Si le joueur trouve en 12 tours : 100 point. (bref c'est 1200 -100*tentatives)
         if nb_tentatives > self.__tentatives_max:
             self.__valeur_score = 0
         else:

@@ -38,7 +38,7 @@ class VueJeu:
         ligne_pions_ids = []
         for j in range(4):
             x_pion = 120 + (j * 50)
-            pion_id = self.canvas.create_oval(x_pion, y_ligne + 5, x_pion + 30, y_ligne + 35, fill=self.etat_pions[i][j], outline="white", width=2)
+            pion_id = self.canvas.create_oval(x_pion, y_ligne + 5, x_pion + 30, y_ligne + 35, fill=self.etat_pions[i][j].value, outline="white", width=2)
             ligne_pions_ids.append(pion_id)
             self.canvas.tag_bind(pion_id, "<Button-1>", lambda event, l=i, p=j: self.changer_couleur(l, p))
         
@@ -63,7 +63,7 @@ class VueJeu:
         index_couleur = self.couleurs.index(couleur_actuelle)
         prochaine_couleur = self.couleurs[(index_couleur + 1) % len(self.couleurs)]
         self.etat_pions[ligne][index_pion] = prochaine_couleur
-        self.canvas.itemconfig(self.pions_graphiques[ligne][index_pion], fill=prochaine_couleur)
+        self.canvas.itemconfig(self.pions_graphiques[ligne][index_pion], fill=prochaine_couleur.value)
 
     def valider_ligne(self, ligne):
         proposition = self.etat_pions[ligne]

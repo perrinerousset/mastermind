@@ -1,4 +1,4 @@
-from model.score import Score
+from .score import Score
 
 class Jeu:
     def __init__(self, id_partie, nb_tentatives=0, est_gagne=False):

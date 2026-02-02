@@ -7,18 +7,16 @@ class historique:
         self.filename = os.path.join(base_dir, filename)
 
     def ajouter_au_fichier(self, objet_jeu):
-        """
-        Récupère les données d'un objet Jeu et les ajoute au fichier JSON.
-        """
+       
         donnees_partie = objet_jeu.sauvegarder_partie()
 
-        # Charger l'ancien historique
+        
         donnees_globales = self.charger_historique()
         
-        # Ajouter la nouvelle partie à la liste
+        
         donnees_globales.append(donnees_partie)
         
-        # Réécrire le fichier proprement
+        # Réécrire fichier proprement
         with open(self.filename, "w", encoding="utf-8") as f:
             json.dump(donnees_globales, f, indent=4, ensure_ascii=False)
         

@@ -1,12 +1,3 @@
-    #couleurs : 
-    #0cb2af  bleu
-    #a1c65d   vert
-    #fac723 jaune
-    #f29222 orange
-    #e95e50 rouge
-    #936fac violet
-
-
 import random
 from enum import Enum
 
@@ -41,12 +32,14 @@ class mastermind :
         blancs = 0
         combi_secrete = list(self.__CombinaisonSecrete)
         liste_prop = list(ListeProposition)
-        # Recherche des pionts bien placés (les rouges)
+
+        # Recherche des pions bien placés (les rouges)
         for i in range(4):
             if liste_prop[i] == combi_secrete[i]:
                 rouges += 1
                 combi_secrete[i] = None
                 liste_prop[i] = None
+                
         #  Recherche des pions mal placés mais de la bonne couleur (les blancs)
         for i in range(4):
             if liste_prop[i] is not None:

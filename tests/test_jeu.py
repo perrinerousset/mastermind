@@ -20,6 +20,19 @@ def test_terminer_partie_defaite(nouveau_jeu):
     nouveau_jeu.terminer_partie(a_gagne=False, nb_tours_finaux=12)
     assert nouveau_jeu.get_score() == 0
 
-# faire test pour sauvegarder partie 
+def test_sauvegarder_partie():
+    jeu = Jeu(id_partie=1)
+    jeu.set_nb_tentatives(4)
+    jeu.set_est_gagne(True)
+    jeu.set_score(20)
+
+    sauvegarde = jeu.sauvegarder_partie()
+
+    assert sauvegarde == {
+        "id": 1,
+        "score": 20,
+        "tentatives": 4,
+        "victoire": True
+    }
 
 

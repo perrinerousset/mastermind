@@ -16,7 +16,7 @@ dependencies = []
 
 [project.optional-dependencies]
 test = ["pytest"]
-dev = ["ruff"]
+dev = ["ruff","pylint"]
 
 [build-system]
 requires = ["setuptools", "setuptools-scm"]

@@ -30,3 +30,21 @@ class historique:
                 return json.load(f)
         except json.JSONDecodeError:
             return []
+    
+    def charger_partie_en_cours(self):
+        donnees = self.charger_historique()
+        for partie in reversed(donnees): # On regarde la plus récente
+            if partie.get("en_cours") == True:
+                return partie
+        return None
+
+    def charger_parties_terminees(self):
+        donnees = self.charger_historique()
+        parties_a_afficher = [] 
+        for p in donnees:
+            if p.get("en_cours") == False or "en_cours" not in p:
+                parties_a_afficher.append(p)
+        return parties_a_afficher
+    
+    
+    

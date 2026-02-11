@@ -6,6 +6,7 @@ from view.vue_historique import VueHistorique
 from view.vue_regles_jeu import VueReglesJeu
 from model.jeu import Jeu
 from model.historique import historique
+from model.mastermind import Couleur
 
 class Controleur:
     def __init__(self):
@@ -18,6 +19,7 @@ class Controleur:
         self.historique_parties = []
         self.compteur_id = 1
         self.afficher_accueil()   
+        self.charger_derniere_session()
         self.root.mainloop()
         
     def afficher_accueil(self):
@@ -41,9 +43,9 @@ class Controleur:
         self.vue_principale.nettoyer_zone_centrale()
         if self.vue_jeu_active:
             self.vue_jeu_active.redessiner_sur_parent(self.vue_principale.zone_centrale)
+        elif self.partie_objet and self.vue_jeu_active is None:
+            self.vue_jeu_active = VueJeu(self.vue_principale.zone_centrale, self.modele, self)
         else:
-            self.nouvelle_partie()
-        if self.vue_jeu_active is None:
             self.nouvelle_partie()
 
     def afficher_historique(self):
@@ -59,6 +61,27 @@ class Controleur:
             return
         self.partie_objet.terminer_partie(victoire, tentatives)
         historique().ajouter_au_fichier(self.partie_objet)
+        
+    def charger_derniere_session(self):
+        h = historique()
+        sauvegarde = h.charger_partie_en_cours()
+        if sauvegarde:
+            # 1. On convertit les noms (Strings) en objets Couleur (Enums)
+            # D'abord pour la solution
+            solution_enums = [Couleur[nom] for nom in sauvegarde["solution"]]
+            
+            # 2. On les donne au modèle Mastermind (très important pour le calcul)
+            self.modele.CombinaisonSecrete = solution_enums
+            
+            # 3. On crée l'objet Jeu en passant les Enums pour la solution
+            self.partie_objet = Jeu(
+                id_partie=sauvegarde["id"],
+                nb_tentatives=sauvegarde["tentatives"],
+                combinaison_secrete=solution_enums, # <--- Utilisez solution_enums ici !
+                historique_tentatives=sauvegarde["historique_couleurs"]
+            )
+            self.compteur_id = sauvegarde["id"]
+
 
 if __name__ == "__main__":
     Controleur()

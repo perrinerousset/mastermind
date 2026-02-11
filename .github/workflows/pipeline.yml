@@ -1,6 +1,6 @@
 name: Lint, test and build mastermind project
 
-on: [push]   # a remettre quand ca marchera 
+on: [push]
 
 jobs:
   lint:
@@ -75,6 +75,5 @@ jobs:
       uses: actions/upload-artifact@v4
       with: 
         name: executable
-        path: dist/*  #a changer quand on aura le bon path 
-        
+        path: dist/*
   

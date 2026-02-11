@@ -6,7 +6,8 @@ authors = [
   { name="Noemie Dubouloz", email="noemie.dubouloz@insa-strasbourg.fr" },
   { name="Perrine Rousset", email="perrine.rousset@insa-strasbourg.fr" },
   { name="Victoria Blanchard", email="victoria.blanchard@insa-strasbourg.fr" }
-]readme = "README.md"
+]
+readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "BSD-3-Clause" }
 classifiers = ["Programming Language :: Python :: 3"]

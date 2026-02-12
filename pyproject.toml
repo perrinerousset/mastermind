@@ -2,21 +2,21 @@
 name = "mastermind"
 version = "0.1.0"
 description = "Mastermind game application"
-authors = [{ name = "Dubouloz Noémie, Rousset Perrine, Blanchard Victoria", email = "noemie.dubouloz@insa-strasbourg.fr, perrine.rousset@insa-strasbourg.fr, victoria.blanchard@insa-strasbourg.fr " }]
+authors = [
+  { name="Noemie Dubouloz", email="noemie.dubouloz@insa-strasbourg.fr" },
+  { name="Perrine Rousset", email="perrine.rousset@insa-strasbourg.fr" },
+  { name="Victoria Blanchard", email="victoria.blanchard@insa-strasbourg.fr" }
+]
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "BSD-3-Clause" }
 classifiers = ["Programming Language :: Python :: 3"]
 
-dependencies = [
-    "tkinter",
-    "json",
-    "os" 
-]
+dependencies = []
 
 [project.optional-dependencies]
 test = ["pytest"]
-dev = ["ruff"]
+dev = ["ruff","pylint"]
 
 [build-system]
 requires = ["setuptools", "setuptools-scm"]

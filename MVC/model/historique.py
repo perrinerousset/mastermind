@@ -11,26 +11,19 @@ class historique:
         
 
     def ajouter_au_fichier(self, objet_jeu):
-       
         donnees_partie = objet_jeu.sauvegarder_partie()
-
-        
         donnees_globales = self.charger_historique()
-        
-        
-        donnees_globales.append(donnees_partie)
-        
-        # Réécrire fichier proprement
+        partie_trouvee = False
+        for i, p in enumerate(donnees_globales):
+            if p.get("id") == donnees_partie.get("id"):
+                donnees_globales[i] = donnees_partie 
+                partie_trouvee = True
+                break
+        if not partie_trouvee:
+            donnees_globales.append(donnees_partie) 
         with open(self.filename, "w", encoding="utf-8") as f:
             json.dump(donnees_globales, f, indent=4, ensure_ascii=False)
-            logger.info(
-                "Partie %s enregistrée dans l'historique.",
-                donnees_partie.get("id", "?")
-            )
-
-        
-        #print(f"Partie {donnees_partie.get('id','?')} enregistrée dans l'historique.")
-        
+            logger.info("Partie %s synchronisée dans l'historique.", donnees_partie.get("id", "?"))
 
     def charger_historique(self):
         if not os.path.exists(self.filename):

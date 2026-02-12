@@ -364,16 +364,257 @@
     },
     {
         "id": 6,
+        "score": 900,
+        "tentatives": 4,
+        "victoire": true,
+        "solution": [
+            "JAUNE",
+            "BLEU",
+            "ROUGE",
+            "ROUGE"
+        ],
+        "historique_couleurs": [
+            [
+                "VERT",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "JAUNE",
+                "ORANGE",
+                "BLEU",
+                "VIOLET"
+            ],
+            [
+                "ORANGE",
+                "ORANGE",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "JAUNE",
+                "BLEU",
+                "ROUGE",
+                "ROUGE"
+            ]
+        ],
+        "en_cours": false
+    },
+    {
+        "id": 7,
         "score": 0,
         "tentatives": 0,
         "victoire": false,
         "solution": [
-            "ROUGE",
-            "BLEU",
             "ORANGE",
+            "VIOLET",
+            "BLEU",
+            "VIOLET"
+        ],
+        "historique_couleurs": [],
+        "en_cours": true
+    },
+    {
+        "id": 8,
+        "score": 0,
+        "tentatives": 0,
+        "victoire": false,
+        "solution": [
+            "JAUNE",
+            "VERT",
+            "VIOLET",
             "ORANGE"
         ],
         "historique_couleurs": [],
         "en_cours": true
+    },
+    {
+        "id": 9,
+        "score": 0,
+        "tentatives": 12,
+        "victoire": false,
+        "solution": [
+            "ORANGE",
+            "BLEU",
+            "ROUGE",
+            "BLEU"
+        ],
+        "historique_couleurs": [
+            [
+                "BLEU",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "VERT",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ]
+        ],
+        "en_cours": false
+    },
+    {
+        "id": 10,
+        "score": 0,
+        "tentatives": 0,
+        "victoire": false,
+        "solution": [
+            "VIOLET",
+            "BLEU",
+            "VERT",
+            "ROUGE"
+        ],
+        "historique_couleurs": [],
+        "en_cours": true
+    },
+    {
+        "id": 11,
+        "score": 0,
+        "tentatives": 12,
+        "victoire": false,
+        "solution": [
+            "JAUNE",
+            "VIOLET",
+            "BLEU",
+            "ORANGE"
+        ],
+        "historique_couleurs": [
+            [
+                "BLEU",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ]
+        ],
+        "en_cours": false
     }
 ]

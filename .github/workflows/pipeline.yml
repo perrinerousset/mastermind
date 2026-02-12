@@ -9,7 +9,7 @@ jobs:
     - name: get code
       uses: actions/checkout@v4
     - name: Set up Python 3.11
-      uses: actions/setup-python@v3 
+      uses: actions/setup-python@v4
       with:
         python-version: 3.11
     - name: Install dependencies
@@ -18,7 +18,12 @@ jobs:
         source .venv/bin/activate
         python -m pip install --upgrade pip
         pip install -e .[dev,test]
-    
+    - name: Check style and imports with Ruff
+      run: |
+        source .venv/bin/activate
+        ruff check . 
+        ruff format --check .
+
     - name: Install build
       run: |
         source .venv/bin/activate

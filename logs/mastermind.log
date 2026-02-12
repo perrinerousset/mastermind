@@ -126,3 +126,86 @@
 2026-02-12 17:53:15,267 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
 2026-02-12 17:53:15,269 - MVC.model.historique - INFO - Partie 5 synchronisée dans l'historique.
 2026-02-12 17:53:15,272 - MVC.model.historique - INFO - Partie 5 synchronisée dans l'historique.
+2026-02-12 18:55:01,520 - MVC.model.mastermind - DEBUG - Initialisation du modèle Mastermind
+2026-02-12 18:55:05,500 - MVC.model.mastermind - DEBUG - Nouvelle combinaison secrète générée (DEBUG uniquement) : [<Couleur.JAUNE: '#fac723'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.ROUGE: '#e95e50'>, <Couleur.ROUGE: '#e95e50'>]
+2026-02-12 18:55:05,502 - MVC.model.historique - INFO - Partie 6 synchronisée dans l'historique.
+2026-02-12 19:03:57,689 - MVC.model.mastermind - DEBUG - Initialisation du modèle Mastermind
+2026-02-12 19:04:03,605 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.VERT: '#a1c65d'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:04:03,608 - MVC.model.historique - INFO - Partie 6 synchronisée dans l'historique.
+2026-02-12 19:04:17,410 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.JAUNE: '#fac723'>, <Couleur.ORANGE: '#f29222'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.VIOLET: '#936fac'>]
+2026-02-12 19:04:17,414 - MVC.model.historique - INFO - Partie 6 synchronisée dans l'historique.
+2026-02-12 19:04:32,271 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.ORANGE: '#f29222'>, <Couleur.ORANGE: '#f29222'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:04:32,274 - MVC.model.historique - INFO - Partie 6 synchronisée dans l'historique.
+2026-02-12 19:05:00,197 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.JAUNE: '#fac723'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.ROUGE: '#e95e50'>, <Couleur.ROUGE: '#e95e50'>]
+2026-02-12 19:05:00,200 - MVC.model.historique - INFO - Partie 6 synchronisée dans l'historique.
+2026-02-12 19:05:00,233 - MVC.model.historique - INFO - Partie 6 synchronisée dans l'historique.
+2026-02-12 19:05:23,411 - MVC.model.mastermind - DEBUG - Initialisation du modèle Mastermind
+2026-02-12 19:05:25,099 - MVC.model.mastermind - DEBUG - Nouvelle combinaison secrète générée (DEBUG uniquement) : [<Couleur.ORANGE: '#f29222'>, <Couleur.VIOLET: '#936fac'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.VIOLET: '#936fac'>]
+2026-02-12 19:05:25,102 - MVC.model.historique - INFO - Partie 7 synchronisée dans l'historique.
+2026-02-12 19:05:31,417 - MVC.model.mastermind - DEBUG - Nouvelle combinaison secrète générée (DEBUG uniquement) : [<Couleur.JAUNE: '#fac723'>, <Couleur.VERT: '#a1c65d'>, <Couleur.VIOLET: '#936fac'>, <Couleur.ORANGE: '#f29222'>]
+2026-02-12 19:05:31,420 - MVC.model.historique - INFO - Partie 8 synchronisée dans l'historique.
+2026-02-12 19:05:31,590 - MVC.model.mastermind - DEBUG - Nouvelle combinaison secrète générée (DEBUG uniquement) : [<Couleur.ORANGE: '#f29222'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.ROUGE: '#e95e50'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:05:31,593 - MVC.model.historique - INFO - Partie 9 synchronisée dans l'historique.
+2026-02-12 19:05:32,915 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:05:32,918 - MVC.model.historique - INFO - Partie 9 synchronisée dans l'historique.
+2026-02-12 19:05:34,513 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.VERT: '#a1c65d'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:05:34,516 - MVC.model.historique - INFO - Partie 9 synchronisée dans l'historique.
+2026-02-12 19:05:35,318 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:05:35,321 - MVC.model.historique - INFO - Partie 9 synchronisée dans l'historique.
+2026-02-12 19:05:35,926 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:05:35,929 - MVC.model.historique - INFO - Partie 9 synchronisée dans l'historique.
+2026-02-12 19:05:36,532 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:05:36,535 - MVC.model.historique - INFO - Partie 9 synchronisée dans l'historique.
+2026-02-12 19:05:37,124 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:05:37,127 - MVC.model.historique - INFO - Partie 9 synchronisée dans l'historique.
+2026-02-12 19:05:37,732 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:05:37,735 - MVC.model.historique - INFO - Partie 9 synchronisée dans l'historique.
+2026-02-12 19:05:38,377 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:05:38,380 - MVC.model.historique - INFO - Partie 9 synchronisée dans l'historique.
+2026-02-12 19:05:45,472 - MVC.model.mastermind - DEBUG - Initialisation du modèle Mastermind
+2026-02-12 19:05:46,718 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:05:46,719 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.VERT: '#a1c65d'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:05:46,720 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:05:46,721 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:05:46,722 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:05:46,723 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:05:46,724 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:05:46,725 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:05:49,351 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:05:49,355 - MVC.model.historique - INFO - Partie 9 synchronisée dans l'historique.
+2026-02-12 19:05:50,160 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:05:50,163 - MVC.model.historique - INFO - Partie 9 synchronisée dans l'historique.
+2026-02-12 19:05:50,765 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:05:50,769 - MVC.model.historique - INFO - Partie 9 synchronisée dans l'historique.
+2026-02-12 19:05:51,601 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:05:51,604 - MVC.model.historique - INFO - Partie 9 synchronisée dans l'historique.
+2026-02-12 19:05:51,634 - MVC.model.historique - INFO - Partie 9 synchronisée dans l'historique.
+2026-02-12 19:06:09,883 - MVC.model.mastermind - DEBUG - Nouvelle combinaison secrète générée (DEBUG uniquement) : [<Couleur.VIOLET: '#936fac'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.VERT: '#a1c65d'>, <Couleur.ROUGE: '#e95e50'>]
+2026-02-12 19:06:09,886 - MVC.model.historique - INFO - Partie 10 synchronisée dans l'historique.
+2026-02-12 19:06:11,628 - MVC.model.mastermind - DEBUG - Nouvelle combinaison secrète générée (DEBUG uniquement) : [<Couleur.JAUNE: '#fac723'>, <Couleur.VIOLET: '#936fac'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.ORANGE: '#f29222'>]
+2026-02-12 19:06:11,631 - MVC.model.historique - INFO - Partie 11 synchronisée dans l'historique.
+2026-02-12 19:06:16,213 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:06:16,217 - MVC.model.historique - INFO - Partie 11 synchronisée dans l'historique.
+2026-02-12 19:06:16,909 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:06:16,912 - MVC.model.historique - INFO - Partie 11 synchronisée dans l'historique.
+2026-02-12 19:06:18,026 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:06:18,029 - MVC.model.historique - INFO - Partie 11 synchronisée dans l'historique.
+2026-02-12 19:06:19,154 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:06:19,157 - MVC.model.historique - INFO - Partie 11 synchronisée dans l'historique.
+2026-02-12 19:06:19,946 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:06:19,949 - MVC.model.historique - INFO - Partie 11 synchronisée dans l'historique.
+2026-02-12 19:06:20,552 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:06:20,556 - MVC.model.historique - INFO - Partie 11 synchronisée dans l'historique.
+2026-02-12 19:06:21,132 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:06:21,136 - MVC.model.historique - INFO - Partie 11 synchronisée dans l'historique.
+2026-02-12 19:06:21,734 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:06:21,737 - MVC.model.historique - INFO - Partie 11 synchronisée dans l'historique.
+2026-02-12 19:06:22,302 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:06:22,305 - MVC.model.historique - INFO - Partie 11 synchronisée dans l'historique.
+2026-02-12 19:06:22,899 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:06:22,902 - MVC.model.historique - INFO - Partie 11 synchronisée dans l'historique.
+2026-02-12 19:06:23,532 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:06:23,535 - MVC.model.historique - INFO - Partie 11 synchronisée dans l'historique.
+2026-02-12 19:06:24,193 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 19:06:24,196 - MVC.model.historique - INFO - Partie 11 synchronisée dans l'historique.
+2026-02-12 19:06:24,221 - MVC.model.historique - INFO - Partie 11 synchronisée dans l'historique.

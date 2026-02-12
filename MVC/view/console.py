@@ -31,6 +31,8 @@ class VueJeu:
         self.btn_nouveau.pack(pady=10)
         self.canvas_solution = tk.Canvas(self.frame_principale, bg="white", width=400, height=60, highlightthickness=0)
         self.canvas_solution.pack(pady=5)
+        self.label_score = tk.Label(self.frame_principale, text="", bg="white",font=("Arial", 14, "bold"), fg="#2c3e50")
+        self.label_score.pack(pady=5)
         
     def redessiner_sur_parent(self, nouveau_parent):
         self.frame_principale.pack(in_=nouveau_parent, expand=True, fill="both")
@@ -104,17 +106,22 @@ class VueJeu:
                 tentatives = self.ligne_actuelle + 1
                 texte = f"VICTOIRE ! Gagné en {tentatives} tentative(s) !"
                 couleur = "#90EE90"
+                score_final = self.controleur.partie_objet.get_score()
+                self.label_score.config(text=f"Score : {score_final}")
             elif etat == "tentative":
                 restantes = 12 - self.ligne_actuelle
                 texte = f"Il vous reste {restantes} tentative(s)"
                 couleur = "#EEE8AA"
+                self.label_score.config(text="")
             elif etat == "perdu":
-                texte = "PERDU ! La solution était :" # à rajouté ! mettre la solution !! 
+                texte = "PERDU !" # à rajouté ! mettre la solution !! 
                 couleur = "#F08080"
                 self.dessiner_solution_finale()#c'est bon je l'ai ajouté, je vais test 
+                self.label_score.config(text="Score : 0")
             else:
                 texte = "À vous de jouer !"
                 couleur = "#EEE8AA"
+                self.label_score.config(text="")
             self.zone_message.config(text=texte, bg=couleur)
             
     def dessiner_solution_finale(self):

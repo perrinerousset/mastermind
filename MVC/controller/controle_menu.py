@@ -28,16 +28,21 @@ class Controleur:
 
 
     def nouvelle_partie(self):
-            if self.partie_objet:
-                self.historique_parties.append(self.partie_objet)
-            if self.vue_jeu_active:
-                    self.vue_jeu_active.frame_principale.destroy()
-                    self.vue_jeu_active = None
-            self.vue_principale.nettoyer_zone_centrale()
-            self.modele.Combinaison_secrete() 
-            self.partie_objet = Jeu(id_partie=self.compteur_id)
-            self.compteur_id += 1
-            self.vue_jeu_active = VueJeu(self.vue_principale.zone_centrale, self.modele, self)
+        if self.partie_objet:
+            self.historique_parties.append(self.partie_objet)
+        if self.vue_jeu_active:
+            self.vue_jeu_active.frame_principale.destroy()
+            self.vue_jeu_active = None     
+        self.vue_principale.nettoyer_zone_centrale()
+        self.modele.Combinaison_secrete() 
+        solution_noms = [c.name for c in self.modele.CombinaisonSecrete]
+        self.partie_objet = Jeu(
+            id_partie=self.compteur_id, 
+            combinaison_secrete=solution_noms
+        )
+        self.compteur_id += 1
+        historique().ajouter_au_fichier(self.partie_objet)
+        self.vue_jeu_active = VueJeu(self.vue_principale.zone_centrale, self.modele, self)
                     
     def afficher_jeu(self):
         self.vue_principale.nettoyer_zone_centrale()
@@ -66,22 +71,15 @@ class Controleur:
         h = historique()
         sauvegarde = h.charger_partie_en_cours()
         if sauvegarde:
-            # 1. On convertit les noms (Strings) en objets Couleur (Enums)
-            # D'abord pour la solution
             solution_enums = [Couleur[nom] for nom in sauvegarde["solution"]]
-            
-            # 2. On les donne au modèle Mastermind (très important pour le calcul)
             self.modele.CombinaisonSecrete = solution_enums
-            
-            # 3. On crée l'objet Jeu en passant les Enums pour la solution
             self.partie_objet = Jeu(
                 id_partie=sauvegarde["id"],
                 nb_tentatives=sauvegarde["tentatives"],
-                combinaison_secrete=solution_enums, # <--- Utilisez solution_enums ici !
+                combinaison_secrete=sauvegarde["solution"], 
                 historique_tentatives=sauvegarde["historique_couleurs"]
             )
             self.compteur_id = sauvegarde["id"]
-
 
 if __name__ == "__main__":
     Controleur()

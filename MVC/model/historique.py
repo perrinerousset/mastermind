@@ -1,10 +1,14 @@
 import json
 import os
+import logging
+
+logger = logging.getLogger(__name__)
 
 class historique:
     def __init__(self, filename="historique.json"):
         base_dir = os.path.dirname(__file__)
         self.filename = os.path.join(base_dir, filename)
+        
 
     def ajouter_au_fichier(self, objet_jeu):
        
@@ -19,8 +23,14 @@ class historique:
         # Réécrire fichier proprement
         with open(self.filename, "w", encoding="utf-8") as f:
             json.dump(donnees_globales, f, indent=4, ensure_ascii=False)
+            logger.info(
+                "Partie %s enregistrée dans l'historique.",
+                donnees_partie.get("id", "?")
+            )
+
         
-        print(f"Partie {donnees_partie.get('id','?')} enregistrée dans l'historique.")
+        #print(f"Partie {donnees_partie.get('id','?')} enregistrée dans l'historique.")
+        
 
     def charger_historique(self):
         if not os.path.exists(self.filename):

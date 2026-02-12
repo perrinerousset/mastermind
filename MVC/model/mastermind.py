@@ -1,5 +1,9 @@
 import random
 from enum import Enum
+import logging
+
+logger = logging.getLogger(__name__)
+
 
 class Couleur(Enum):
     BLEU = "#0cb2af"
@@ -14,7 +18,7 @@ class mastermind :
     def __init__(self): 
         self.__ListeCouleur = list(Couleur)
         self.__CombinaisonSecrete = []
-    
+        logger.debug("Initialisation du modèle Mastermind")
     
     @property
     def ListeCouleur(self):

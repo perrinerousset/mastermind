@@ -12,7 +12,7 @@ class VueJeu:
         self.frame_principale.pack(expand=True, fill="both")
         self.zone_message = tk.Label(self.frame_principale, text="Bonne chance !", bg="#EEE8AA", font=("Arial", 12, "bold"), relief="solid", bd=2, padx=10, pady=5)
         self.zone_message.pack(pady=(10, 0))
-        self.canvas = tk.Canvas(self.frame_principale, bg="#8B4513", width=500, height=580)
+        self.canvas = tk.Canvas(self.frame_principale, bg="#8B4513", width=500, height=580) 
         self.canvas.pack(pady=10)
         self.couleurs = self.modele.ListeCouleur
         historique_couleurs = []
@@ -29,7 +29,9 @@ class VueJeu:
 
         self.btn_nouveau = tk.Button(self.frame_principale, text="Nouvelle Partie", command=self.controleur.nouvelle_partie, bg="#2ecc71", fg="white", font=("Arial", 10, "bold"))
         self.btn_nouveau.pack(pady=10)
-
+        self.canvas_solution = tk.Canvas(self.frame_principale, bg="white", width=400, height=60, highlightthickness=0)
+        self.canvas_solution.pack(pady=5)
+        
     def redessiner_sur_parent(self, nouveau_parent):
         self.frame_principale.pack(in_=nouveau_parent, expand=True, fill="both")
 
@@ -109,10 +111,25 @@ class VueJeu:
             elif etat == "perdu":
                 texte = "PERDU ! La solution était :" # à rajouté ! mettre la solution !! 
                 couleur = "#F08080"
+                self.dessiner_solution_finale()#c'est bon je l'ai ajouté, je vais test 
             else:
                 texte = "À vous de jouer !"
                 couleur = "#EEE8AA"
             self.zone_message.config(text=texte, bg=couleur)
+            
+    def dessiner_solution_finale(self):
+        self.canvas_solution.delete("all") 
+        y_centre = 30
+        self.canvas_solution.create_text(70, y_centre, text="SOLUTION :", fill="#2c3e50", font=("Arial", 10, "bold"))
+        for j, couleur_enum in enumerate(self.modele.CombinaisonSecrete):
+            x_pion = 130 + (j * 50)
+            self.canvas_solution.create_oval(
+                x_pion, y_centre - 15, 
+                x_pion + 30, y_centre + 15, 
+                fill=couleur_enum.value, 
+                outline="#8B4513", 
+                width=2
+            )
             
     def restaurer_visuel(self, historique_couleurs):
         self.ligne_actuelle = 0

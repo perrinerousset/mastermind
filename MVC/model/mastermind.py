@@ -30,11 +30,17 @@ class mastermind :
     
     def Combinaison_secrete(self): 
         self.__CombinaisonSecrete = random.choices(self.__ListeCouleur, k=4)
+        logger.debug("Nouvelle combinaison secrète générée (DEBUG uniquement) : %s", self.__CombinaisonSecrete)
+
     
     def verification_proposition(self, ListeProposition):
+        logger.debug("Vérification proposition : %s", ListeProposition)
         rouges = 0
         blancs = 0
         if not self.__CombinaisonSecrete or len(self.__CombinaisonSecrete) != 4: #ça beugait des fois :
+            logger.warning(
+                "Tentative de vérification sans combinaison secrète valide."
+            )
             return 0, 0
         combi_secrete = list(self.__CombinaisonSecrete)
         liste_prop = list(ListeProposition)

@@ -30,15 +30,10 @@ class mastermind :
     def verification_proposition(self, ListeProposition):
         rouges = 0
         blancs = 0
-        
-        # SÉCURITÉ : Si la combinaison n'est pas chargée, on ne peut pas comparer
-        if not self.__CombinaisonSecrete or len(self.__CombinaisonSecrete) != 4:
+        if not self.__CombinaisonSecrete or len(self.__CombinaisonSecrete) != 4: #ça beugait des fois :
             return 0, 0
-
         combi_secrete = list(self.__CombinaisonSecrete)
         liste_prop = list(ListeProposition)
-        
-        # Recherche des pions bien placés
         for i in range(4):
             if liste_prop[i] == combi_secrete[i]:
                 rouges += 1

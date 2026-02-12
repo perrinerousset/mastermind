@@ -116,33 +116,19 @@ class VueJeu:
             
     def restaurer_visuel(self, historique_couleurs):
         self.ligne_actuelle = 0
-        # On boucle sur chaque tentative sauvegardée
         for i, noms_couleurs in enumerate(historique_couleurs):
-            # 1. On restaure les couleurs dans l'état interne
             self.etat_pions[i] = [Couleur[nom] for nom in noms_couleurs]
-            
-            # 2. On dessine la ligne graphiquement
             self.dessiner_nouvelle_ligne(i)
-            
-            # 3. On calcule les indices (rouges/blancs)
             rouges, blancs = self.modele.verification_proposition(self.etat_pions[i])
-            
-            # 4. On affiche les pions rouges et blancs
             res = self.resultats_graphiques[i]
             self.canvas.itemconfig(res["textes"]["rouge"], text=str(rouges))
             self.canvas.itemconfig(res["textes"]["blanc"], text=str(blancs))
             for obj in res["objets"]: 
                 self.canvas.itemconfig(obj, state='normal')
-                
-            # 5. On verrouille cette ligne (Bouton et Clics)
             self.boutons_valider[i].config(state="disabled")
             for pion_id in self.pions_graphiques[i]:
                 self.canvas.tag_unbind(pion_id, "<Button-1>")
-            
-            # 6. On passe à l'index suivant
             self.ligne_actuelle = i + 1
-    
-        # Une fois l'historique dessiné, on crée la ligne vide pour jouer
         if self.ligne_actuelle < 12:
             self.dessiner_nouvelle_ligne(self.ligne_actuelle)
         else:

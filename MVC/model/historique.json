@@ -361,5 +361,19 @@
             ]
         ],
         "en_cours": false
+    },
+    {
+        "id": 6,
+        "score": 0,
+        "tentatives": 0,
+        "victoire": false,
+        "solution": [
+            "ROUGE",
+            "BLEU",
+            "ORANGE",
+            "ORANGE"
+        ],
+        "historique_couleurs": [],
+        "en_cours": true
     }
 ]

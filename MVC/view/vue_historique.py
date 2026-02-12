@@ -1,6 +1,6 @@
 import tkinter as tk
-from model.historique import historique
-from model.score import Score
+from MVC.model.historique import historique
+from MVC.model.score import Score
 
 class VueHistorique:
     def __init__(self, parent, modele_jeu=None):

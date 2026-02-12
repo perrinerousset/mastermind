@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
-from model.historique import historique
-from model.mastermind import Couleur
+from MVC.model.historique import historique
+from MVC.model.mastermind import Couleur
 
 class VueJeu:
     def __init__(self, parent_frame, modele, controleur):

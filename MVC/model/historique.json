@@ -2066,9 +2066,9 @@
         "historique_couleurs": [
             [
                 "VERT",
-                "JAUNE",
-                "ORANGE",
-                "ORANGE"
+                "VERT",
+                "VERT",
+                "BLEU"
             ]
         ],
         "en_cours": true
@@ -2087,14 +2087,14 @@
         "historique_couleurs": [
             [
                 "VERT",
-                "JAUNE",
-                "ORANGE",
-                "ORANGE"
+                "VERT",
+                "VERT",
+                "BLEU"
             ],
             [
                 "BLEU",
-                "BLEU",
-                "BLEU",
+                "ORANGE",
+                "JAUNE",
                 "BLEU"
             ]
         ],
@@ -2114,21 +2114,21 @@
         "historique_couleurs": [
             [
                 "VERT",
-                "JAUNE",
-                "ORANGE",
-                "ORANGE"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
+                "VERT",
+                "VERT",
                 "BLEU"
             ],
             [
                 "BLEU",
+                "ORANGE",
                 "JAUNE",
-                "JAUNE",
-                "JAUNE"
+                "BLEU"
+            ],
+            [
+                "VERT",
+                "ORANGE",
+                "ROUGE",
+                "ORANGE"
             ]
         ],
         "en_cours": true
@@ -2147,27 +2147,27 @@
         "historique_couleurs": [
             [
                 "VERT",
-                "JAUNE",
+                "VERT",
+                "VERT",
+                "BLEU"
+            ],
+            [
+                "BLEU",
                 "ORANGE",
+                "JAUNE",
+                "BLEU"
+            ],
+            [
+                "VERT",
+                "ORANGE",
+                "ROUGE",
                 "ORANGE"
             ],
             [
                 "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "JAUNE",
-                "JAUNE",
-                "JAUNE"
-            ],
-            [
-                "ORANGE",
-                "ORANGE",
-                "BLEU",
-                "BLEU"
+                "VERT",
+                "VERT",
+                "VIOLET"
             ]
         ],
         "en_cours": true
@@ -2186,33 +2186,33 @@
         "historique_couleurs": [
             [
                 "VERT",
-                "JAUNE",
+                "VERT",
+                "VERT",
+                "BLEU"
+            ],
+            [
+                "BLEU",
                 "ORANGE",
+                "JAUNE",
+                "BLEU"
+            ],
+            [
+                "VERT",
+                "ORANGE",
+                "ROUGE",
                 "ORANGE"
             ],
             [
                 "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
+                "VERT",
+                "VERT",
+                "VIOLET"
             ],
             [
+                "VERT",
                 "BLEU",
-                "JAUNE",
-                "JAUNE",
-                "JAUNE"
-            ],
-            [
-                "ORANGE",
-                "ORANGE",
-                "BLEU",
-                "BLEU"
-            ],
-            [
                 "VIOLET",
-                "VERT",
-                "VERT",
-                "BLEU"
+                "VERT"
             ]
         ],
         "en_cours": true
@@ -2231,39 +2231,39 @@
         "historique_couleurs": [
             [
                 "VERT",
-                "JAUNE",
+                "VERT",
+                "VERT",
+                "BLEU"
+            ],
+            [
+                "BLEU",
                 "ORANGE",
+                "JAUNE",
+                "BLEU"
+            ],
+            [
+                "VERT",
+                "ORANGE",
+                "ROUGE",
                 "ORANGE"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "JAUNE",
-                "JAUNE",
-                "JAUNE"
-            ],
-            [
-                "ORANGE",
-                "ORANGE",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "VIOLET",
-                "VERT",
-                "VERT",
-                "BLEU"
             ],
             [
                 "BLEU",
                 "VERT",
                 "VERT",
                 "VIOLET"
+            ],
+            [
+                "VERT",
+                "BLEU",
+                "VIOLET",
+                "VERT"
+            ],
+            [
+                "VERT",
+                "VIOLET",
+                "BLEU",
+                "VERT"
             ]
         ],
         "en_cours": true
@@ -2282,33 +2282,21 @@
         "historique_couleurs": [
             [
                 "VERT",
-                "JAUNE",
+                "VERT",
+                "VERT",
+                "BLEU"
+            ],
+            [
+                "BLEU",
                 "ORANGE",
+                "JAUNE",
+                "BLEU"
+            ],
+            [
+                "VERT",
+                "ORANGE",
+                "ROUGE",
                 "ORANGE"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "JAUNE",
-                "JAUNE",
-                "JAUNE"
-            ],
-            [
-                "ORANGE",
-                "ORANGE",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "VIOLET",
-                "VERT",
-                "VERT",
-                "BLEU"
             ],
             [
                 "BLEU",
@@ -2318,8 +2306,20 @@
             ],
             [
                 "VERT",
+                "BLEU",
+                "VIOLET",
+                "VERT"
+            ],
+            [
+                "VERT",
                 "VIOLET",
                 "BLEU",
+                "VERT"
+            ],
+            [
+                "BLEU",
+                "VIOLET",
+                "VERT",
                 "VERT"
             ]
         ],
@@ -2339,33 +2339,21 @@
         "historique_couleurs": [
             [
                 "VERT",
-                "JAUNE",
+                "VERT",
+                "VERT",
+                "BLEU"
+            ],
+            [
+                "BLEU",
                 "ORANGE",
+                "JAUNE",
+                "BLEU"
+            ],
+            [
+                "VERT",
+                "ORANGE",
+                "ROUGE",
                 "ORANGE"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "JAUNE",
-                "JAUNE",
-                "JAUNE"
-            ],
-            [
-                "ORANGE",
-                "ORANGE",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "VIOLET",
-                "VERT",
-                "VERT",
-                "BLEU"
             ],
             [
                 "BLEU",
@@ -2375,66 +2363,9 @@
             ],
             [
                 "VERT",
-                "VIOLET",
                 "BLEU",
+                "VIOLET",
                 "VERT"
-            ],
-            [
-                "VIOLET",
-                "VERT",
-                "BLEU",
-                "VERT"
-            ]
-        ],
-        "en_cours": true
-    },
-    {
-        "id": 2,
-        "score": 500,
-        "tentatives": 8,
-        "victoire": true,
-        "solution": [
-            "VIOLET",
-            "VERT",
-            "BLEU",
-            "VERT"
-        ],
-        "historique_couleurs": [
-            [
-                "VERT",
-                "JAUNE",
-                "ORANGE",
-                "ORANGE"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "JAUNE",
-                "JAUNE",
-                "JAUNE"
-            ],
-            [
-                "ORANGE",
-                "ORANGE",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "VIOLET",
-                "VERT",
-                "VERT",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "VERT",
-                "VERT",
-                "VIOLET"
             ],
             [
                 "VERT",
@@ -2443,360 +2374,16 @@
                 "VERT"
             ],
             [
+                "BLEU",
                 "VIOLET",
                 "VERT",
-                "BLEU",
                 "VERT"
-            ]
-        ],
-        "en_cours": false
-    },
-    {
-        "id": 2,
-        "score": 0,
-        "tentatives": 0,
-        "victoire": false,
-        "solution": [
-            "VERT",
-            "VIOLET",
-            "VERT",
-            "JAUNE"
-        ],
-        "historique_couleurs": [],
-        "en_cours": true
-    },
-    {
-        "id": 2,
-        "score": 0,
-        "tentatives": 1,
-        "victoire": false,
-        "solution": [
-            "VERT",
-            "VIOLET",
-            "VERT",
-            "JAUNE"
-        ],
-        "historique_couleurs": [
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ]
-        ],
-        "en_cours": true
-    },
-    {
-        "id": 2,
-        "score": 0,
-        "tentatives": 2,
-        "victoire": false,
-        "solution": [
-            "VERT",
-            "VIOLET",
-            "VERT",
-            "JAUNE"
-        ],
-        "historique_couleurs": [
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
             ],
             [
                 "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ]
-        ],
-        "en_cours": true
-    },
-    {
-        "id": 2,
-        "score": 0,
-        "tentatives": 3,
-        "victoire": false,
-        "solution": [
-            "VERT",
-            "VIOLET",
-            "VERT",
-            "JAUNE"
-        ],
-        "historique_couleurs": [
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ]
-        ],
-        "en_cours": true
-    },
-    {
-        "id": 2,
-        "score": 0,
-        "tentatives": 4,
-        "victoire": false,
-        "solution": [
-            "VERT",
-            "VIOLET",
-            "VERT",
-            "JAUNE"
-        ],
-        "historique_couleurs": [
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ]
-        ],
-        "en_cours": true
-    },
-    {
-        "id": 2,
-        "score": 0,
-        "tentatives": 5,
-        "victoire": false,
-        "solution": [
-            "VERT",
-            "VIOLET",
-            "VERT",
-            "JAUNE"
-        ],
-        "historique_couleurs": [
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ]
-        ],
-        "en_cours": true
-    },
-    {
-        "id": 2,
-        "score": 0,
-        "tentatives": 6,
-        "victoire": false,
-        "solution": [
-            "VERT",
-            "VIOLET",
-            "VERT",
-            "JAUNE"
-        ],
-        "historique_couleurs": [
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ]
-        ],
-        "en_cours": true
-    },
-    {
-        "id": 2,
-        "score": 0,
-        "tentatives": 7,
-        "victoire": false,
-        "solution": [
-            "VERT",
-            "VIOLET",
-            "VERT",
-            "JAUNE"
-        ],
-        "historique_couleurs": [
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ]
-        ],
-        "en_cours": true
-    },
-    {
-        "id": 2,
-        "score": 0,
-        "tentatives": 8,
-        "victoire": false,
-        "solution": [
-            "VERT",
-            "VIOLET",
-            "VERT",
-            "JAUNE"
-        ],
-        "historique_couleurs": [
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
+                "VERT",
+                "VIOLET",
+                "VERT"
             ]
         ],
         "en_cours": true
@@ -2807,743 +2394,134 @@
         "tentatives": 9,
         "victoire": false,
         "solution": [
-            "VERT",
             "VIOLET",
             "VERT",
-            "JAUNE"
+            "BLEU",
+            "VERT"
         ],
         "historique_couleurs": [
             [
-                "BLEU",
-                "BLEU",
-                "BLEU",
+                "VERT",
+                "VERT",
+                "VERT",
                 "BLEU"
             ],
             [
                 "BLEU",
-                "BLEU",
-                "BLEU",
+                "ORANGE",
+                "JAUNE",
                 "BLEU"
             ],
             [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
+                "VERT",
+                "ORANGE",
+                "ROUGE",
+                "ORANGE"
             ],
             [
                 "BLEU",
+                "VERT",
+                "VERT",
+                "VIOLET"
+            ],
+            [
+                "VERT",
                 "BLEU",
+                "VIOLET",
+                "VERT"
+            ],
+            [
+                "VERT",
+                "VIOLET",
                 "BLEU",
-                "BLEU"
+                "VERT"
             ],
             [
                 "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
+                "VIOLET",
+                "VERT",
+                "VERT"
             ],
             [
                 "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
+                "VERT",
+                "VIOLET",
+                "VERT"
             ],
             [
+                "VIOLET",
+                "VERT",
                 "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
+                "VERT"
             ]
         ],
         "en_cours": true
     },
     {
         "id": 2,
-        "score": 0,
-        "tentatives": 10,
-        "victoire": false,
+        "score": 400,
+        "tentatives": 9,
+        "victoire": true,
         "solution": [
-            "VERT",
             "VIOLET",
             "VERT",
-            "JAUNE"
+            "BLEU",
+            "VERT"
         ],
         "historique_couleurs": [
             [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ]
-        ],
-        "en_cours": true
-    },
-    {
-        "id": 2,
-        "score": 0,
-        "tentatives": 11,
-        "victoire": false,
-        "solution": [
-            "VERT",
-            "VIOLET",
-            "VERT",
-            "JAUNE"
-        ],
-        "historique_couleurs": [
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ]
-        ],
-        "en_cours": true
-    },
-    {
-        "id": 2,
-        "score": 0,
-        "tentatives": 12,
-        "victoire": false,
-        "solution": [
-            "VERT",
-            "VIOLET",
-            "VERT",
-            "JAUNE"
-        ],
-        "historique_couleurs": [
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ]
-        ],
-        "en_cours": false
-    },
-    {
-        "id": 2,
-        "score": 0,
-        "tentatives": 12,
-        "victoire": false,
-        "solution": [
-            "VERT",
-            "VIOLET",
-            "VERT",
-            "JAUNE"
-        ],
-        "historique_couleurs": [
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ]
-        ],
-        "en_cours": false
-    },
-    {
-        "id": 2,
-        "score": 0,
-        "tentatives": 12,
-        "victoire": false,
-        "solution": [
-            "VERT",
-            "VIOLET",
-            "VERT",
-            "JAUNE"
-        ],
-        "historique_couleurs": [
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ]
-        ],
-        "en_cours": false
-    },
-    {
-        "id": 2,
-        "score": 0,
-        "tentatives": 12,
-        "victoire": false,
-        "solution": [
-            "VERT",
-            "VIOLET",
-            "VERT",
-            "JAUNE"
-        ],
-        "historique_couleurs": [
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ]
-        ],
-        "en_cours": false
-    },
-    {
-        "id": 2,
-        "score": 0,
-        "tentatives": 12,
-        "victoire": false,
-        "solution": [
-            "VERT",
-            "VIOLET",
-            "VERT",
-            "JAUNE"
-        ],
-        "historique_couleurs": [
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
+                "VERT",
+                "VERT",
+                "VERT",
                 "BLEU"
             ],
             [
                 "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ]
-        ],
-        "en_cours": false
-    },
-    {
-        "id": 2,
-        "score": 0,
-        "tentatives": 12,
-        "victoire": false,
-        "solution": [
-            "VERT",
-            "VIOLET",
-            "VERT",
-            "JAUNE"
-        ],
-        "historique_couleurs": [
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
-                "BLEU",
-                "BLEU",
+                "ORANGE",
+                "JAUNE",
                 "BLEU"
             ],
             [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
+                "VERT",
+                "ORANGE",
+                "ROUGE",
+                "ORANGE"
             ],
             [
-                "BLEU",
                 "BLEU",
-                "BLEU",
-                "BLEU"
+                "VERT",
+                "VERT",
+                "VIOLET"
             ],
             [
-                "BLEU",
-                "BLEU",
+                "VERT",
                 "BLEU",
-                "BLEU"
+                "VIOLET",
+                "VERT"
             ],
             [
-                "BLEU",
+                "VERT",
+                "VIOLET",
                 "BLEU",
-                "BLEU",
-                "BLEU"
+                "VERT"
             ],
             [
                 "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
+                "VIOLET",
+                "VERT",
+                "VERT"
             ],
             [
-                "BLEU",
                 "BLEU",
-                "BLEU",
-                "BLEU"
+                "VERT",
+                "VIOLET",
+                "VERT"
             ],
             [
+                "VIOLET",
+                "VERT",
                 "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
+                "VERT"
             ]
         ],
         "en_cours": false
@@ -3554,10 +2532,45 @@
         "tentatives": 0,
         "victoire": false,
         "solution": [
-            "BLEU",
             "VIOLET",
+            "ORANGE",
+            "ROUGE",
+            "BLEU"
+        ],
+        "historique_couleurs": [],
+        "en_cours": true
+    },
+    {
+        "id": 2,
+        "score": 0,
+        "tentatives": 1,
+        "victoire": false,
+        "solution": [
+            "VIOLET",
+            "ORANGE",
+            "ROUGE",
+            "BLEU"
+        ],
+        "historique_couleurs": [
+            [
+                "VERT",
+                "VERT",
+                "VERT",
+                "BLEU"
+            ]
+        ],
+        "en_cours": true
+    },
+    {
+        "id": 2,
+        "score": 0,
+        "tentatives": 0,
+        "victoire": false,
+        "solution": [
+            "BLEU",
             "JAUNE",
-            "ORANGE"
+            "ROUGE",
+            "ROUGE"
         ],
         "historique_couleurs": [],
         "en_cours": true
@@ -3569,14 +2582,14 @@
         "victoire": false,
         "solution": [
             "BLEU",
-            "VIOLET",
             "JAUNE",
-            "ORANGE"
+            "ROUGE",
+            "ROUGE"
         ],
         "historique_couleurs": [
             [
                 "VERT",
-                "VERT",
+                "ORANGE",
                 "BLEU",
                 "BLEU"
             ]
@@ -3590,21 +2603,21 @@
         "victoire": false,
         "solution": [
             "BLEU",
-            "VIOLET",
             "JAUNE",
-            "ORANGE"
+            "ROUGE",
+            "ROUGE"
         ],
         "historique_couleurs": [
             [
                 "VERT",
-                "VERT",
+                "ORANGE",
                 "BLEU",
                 "BLEU"
             ],
             [
-                "BLEU",
-                "BLEU",
-                "BLEU",
+                "VERT",
+                "VERT",
+                "JAUNE",
                 "BLEU"
             ]
         ],
@@ -3617,25 +2630,25 @@
         "victoire": false,
         "solution": [
             "BLEU",
-            "VIOLET",
             "JAUNE",
-            "ORANGE"
+            "ROUGE",
+            "ROUGE"
         ],
         "historique_couleurs": [
             [
                 "VERT",
+                "ORANGE",
+                "BLEU",
+                "BLEU"
+            ],
+            [
                 "VERT",
-                "BLEU",
+                "VERT",
+                "JAUNE",
                 "BLEU"
             ],
             [
-                "BLEU",
-                "BLEU",
-                "BLEU",
-                "BLEU"
-            ],
-            [
-                "BLEU",
+                "VERT",
                 "BLEU",
                 "BLEU",
                 "BLEU"
@@ -3646,15 +2659,193 @@
     {
         "id": 2,
         "score": 0,
-        "tentatives": 0,
+        "tentatives": 4,
         "victoire": false,
         "solution": [
+            "BLEU",
             "JAUNE",
-            "VERT",
             "ROUGE",
-            "VIOLET"
+            "ROUGE"
         ],
-        "historique_couleurs": [],
+        "historique_couleurs": [
+            [
+                "VERT",
+                "ORANGE",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "VERT",
+                "VERT",
+                "JAUNE",
+                "BLEU"
+            ],
+            [
+                "VERT",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "VERT",
+                "VERT",
+                "BLEU"
+            ]
+        ],
+        "en_cours": true
+    },
+    {
+        "id": 2,
+        "score": 0,
+        "tentatives": 5,
+        "victoire": false,
+        "solution": [
+            "BLEU",
+            "JAUNE",
+            "ROUGE",
+            "ROUGE"
+        ],
+        "historique_couleurs": [
+            [
+                "VERT",
+                "ORANGE",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "VERT",
+                "VERT",
+                "JAUNE",
+                "BLEU"
+            ],
+            [
+                "VERT",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "VERT",
+                "VERT",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "JAUNE",
+                "ORANGE",
+                "BLEU"
+            ]
+        ],
+        "en_cours": true
+    },
+    {
+        "id": 2,
+        "score": 0,
+        "tentatives": 6,
+        "victoire": false,
+        "solution": [
+            "BLEU",
+            "JAUNE",
+            "ROUGE",
+            "ROUGE"
+        ],
+        "historique_couleurs": [
+            [
+                "VERT",
+                "ORANGE",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "VERT",
+                "VERT",
+                "JAUNE",
+                "BLEU"
+            ],
+            [
+                "VERT",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "VERT",
+                "VERT",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "JAUNE",
+                "ORANGE",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "VERT",
+                "ORANGE",
+                "BLEU"
+            ]
+        ],
+        "en_cours": true
+    },
+    {
+        "id": 2,
+        "score": 0,
+        "tentatives": 7,
+        "victoire": false,
+        "solution": [
+            "BLEU",
+            "JAUNE",
+            "ROUGE",
+            "ROUGE"
+        ],
+        "historique_couleurs": [
+            [
+                "VERT",
+                "ORANGE",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "VERT",
+                "VERT",
+                "JAUNE",
+                "BLEU"
+            ],
+            [
+                "VERT",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "VERT",
+                "VERT",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "JAUNE",
+                "ORANGE",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "VERT",
+                "ORANGE",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "VERT",
+                "VERT",
+                "BLEU"
+            ]
+        ],
         "en_cours": true
     }
 ]

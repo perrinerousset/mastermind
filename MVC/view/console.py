@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 from model.historique import historique
+from model.mastermind import Couleur
 
 class VueJeu:
     def __init__(self, parent_frame, modele, controleur):
@@ -14,6 +15,9 @@ class VueJeu:
         self.canvas = tk.Canvas(self.frame_principale, bg="#8B4513", width=500, height=580)
         self.canvas.pack(pady=10)
         self.couleurs = self.modele.ListeCouleur
+        historique_couleurs = []
+        if self.controleur.partie_objet:
+            historique_couleurs = self.controleur.partie_objet.historique_tentatives
         self.ligne_actuelle = 0
         self.etat_pions = [[self.couleurs[0] for _ in range(4)] for _ in range(12)]
         self.pions_graphiques = [] 
@@ -21,7 +25,7 @@ class VueJeu:
         self.resultats_graphiques = [] 
         self.hauteur_ligne = 45
         self.offset_y = 20
-        self.dessiner_nouvelle_ligne(0)
+        self.restaurer_visuel(historique_couleurs)
 
         self.btn_nouveau = tk.Button(self.frame_principale, text="Nouvelle Partie", command=self.controleur.nouvelle_partie, bg="#2ecc71", fg="white", font=("Arial", 10, "bold"))
         self.btn_nouveau.pack(pady=10)
@@ -77,7 +81,9 @@ class VueJeu:
         self.boutons_valider[ligne].config(state="disabled")# Désactivation de la ligne terminée : on peut plus la modifier
         for pion_id in self.pions_graphiques[ligne]:
             self.canvas.tag_unbind(pion_id, "<Button-1>")
-        
+        self.controleur.partie_objet.set_nb_tentatives(self.ligne_actuelle + 1)
+        self.controleur.partie_objet.ajouter_tentative(proposition)
+        historique().ajouter_au_fichier(self.controleur.partie_objet)
         if self.modele.victoire(proposition):#vérification de la victoire à chaque fois qu'on valide une ligne
             self.controleur.enregistrer_partie(True, ligne+1)
             self.message("victoire")
@@ -107,3 +113,37 @@ class VueJeu:
                 texte = "À vous de jouer !"
                 couleur = "#EEE8AA"
             self.zone_message.config(text=texte, bg=couleur)
+            
+    def restaurer_visuel(self, historique_couleurs):
+        self.ligne_actuelle = 0
+        # On boucle sur chaque tentative sauvegardée
+        for i, noms_couleurs in enumerate(historique_couleurs):
+            # 1. On restaure les couleurs dans l'état interne
+            self.etat_pions[i] = [Couleur[nom] for nom in noms_couleurs]
+            
+            # 2. On dessine la ligne graphiquement
+            self.dessiner_nouvelle_ligne(i)
+            
+            # 3. On calcule les indices (rouges/blancs)
+            rouges, blancs = self.modele.verification_proposition(self.etat_pions[i])
+            
+            # 4. On affiche les pions rouges et blancs
+            res = self.resultats_graphiques[i]
+            self.canvas.itemconfig(res["textes"]["rouge"], text=str(rouges))
+            self.canvas.itemconfig(res["textes"]["blanc"], text=str(blancs))
+            for obj in res["objets"]: 
+                self.canvas.itemconfig(obj, state='normal')
+                
+            # 5. On verrouille cette ligne (Bouton et Clics)
+            self.boutons_valider[i].config(state="disabled")
+            for pion_id in self.pions_graphiques[i]:
+                self.canvas.tag_unbind(pion_id, "<Button-1>")
+            
+            # 6. On passe à l'index suivant
+            self.ligne_actuelle = i + 1
+    
+        # Une fois l'historique dessiné, on crée la ligne vide pour jouer
+        if self.ligne_actuelle < 12:
+            self.dessiner_nouvelle_ligne(self.ligne_actuelle)
+        else:
+            self.message("perdu")

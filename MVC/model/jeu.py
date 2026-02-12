@@ -1,13 +1,14 @@
 from .score import Score
 
 class Jeu:
-    def __init__(self, id_partie, nb_tentatives=0, est_gagne=False):
+    def __init__(self, id_partie, nb_tentatives=0, est_gagne=False, combinaison_secrete=None, historique_tentatives=None):
+        self.historique_tentatives = historique_tentatives or []
         self.__id_partie = id_partie
-        self.__nb_tentatives = nb_tentatives
+        self.__nb_tentatives = len(self.historique_tentatives) if self.historique_tentatives else nb_tentatives
         self.__est_gagne = est_gagne
-
+        self.combinaison_secrete = combinaison_secrete or []
         self.gestionnaire_score = Score()
-        self.__score = 0  # score courant de la partie
+        self.__score = 0
 
    
     def get_id_partie(self):
@@ -42,10 +43,17 @@ class Jeu:
         self.set_score(self.gestionnaire_score.calculer(nb_tours_finaux) if a_gagne else 0)
         return self.__score
 
+    def ajouter_tentative(self, liste_couleurs_enum):
+        noms = [c.name for c in liste_couleurs_enum]# On transforme l'objet Enum en String pour le JSON car je sais pas pourquoi il prend pas les enums. Bref. 
+        self.historique_tentatives.append(noms)
+
     def sauvegarder_partie(self):
         return {
-            "id": self.get_id_partie(),
-            "score": self.get_score(),
-            "tentatives": self.get_nb_tentatives(),
-            "victoire": self.get_est_gagne()
+            "id": self.__id_partie,
+            "score": self.__score,
+            "tentatives": self.__nb_tentatives,
+            "victoire": self.__est_gagne,
+            "solution": self.combinaison_secrete,
+            "historique_couleurs": self.historique_tentatives,
+            "en_cours": not self.__est_gagne and self.__nb_tentatives < 12
         }

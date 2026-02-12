@@ -40,25 +40,20 @@ class VueHistorique:
 
       
         self.charger_et_afficher()
+        
 
     def charger_et_afficher(self):
         
         self.liste_box.delete(0, tk.END) 
-        
-        # On utilise ta classe modèle historique
         h = historique()
-        parties = h.charger_historique()
+        parties = h.charger_parties_terminees()
 
         if not parties:
             self.liste_box.insert(tk.END, " Aucun historique disponible.")
             return
-
-       
         header = f"{'ID':<6} | {'RÉSULTAT':<12} | {'SCORE':<10} | {'TENTATIVES'}"
         self.liste_box.insert(tk.END, header)
         self.liste_box.insert(tk.END, "-" * 50)
-
-        # On affiche les parties (les plus récentes en haut)
         for p in reversed(parties):
             res = "SUCCÈS" if p.get('victoire') else "ÉCHEC"
             ligne = (f" #{p.get('id', '?'):<4} | "
@@ -66,8 +61,6 @@ class VueHistorique:
                      f"{p.get('score', 0):<10} | "
                      f"{p.get('tentatives', 0)}/12")
             self.liste_box.insert(tk.END, ligne)
-            
-            
             if res == "SUCCÈS":
                 self.liste_box.itemconfig(tk.END, fg="#27ae60")
             else:

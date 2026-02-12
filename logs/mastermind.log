@@ -1,12 +1,12 @@
-2026-02-12 16:08:23,541 - MVC.model.mastermind - DEBUG - Initialisation du modèle Mastermind
-2026-02-12 16:08:30,527 - MVC.model.historique - INFO - Partie 2 enregistrée dans l'historique.
-2026-02-12 16:55:33,331 - MVC.model.mastermind - DEBUG - Initialisation du modèle Mastermind
-2026-02-12 16:55:40,401 - MVC.model.historique - INFO - Partie 2 enregistrée dans l'historique.
-2026-02-12 16:56:04,524 - MVC.model.historique - INFO - Partie 2 enregistrée dans l'historique.
-2026-02-12 16:56:18,479 - MVC.model.historique - INFO - Partie 2 enregistrée dans l'historique.
-2026-02-12 17:33:40,163 - MVC.model.mastermind - DEBUG - Initialisation du modèle Mastermind
-2026-02-12 17:33:43,971 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.JAUNE: '#fac723'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
-2026-02-12 17:33:45,675 - MVC.model.mastermind - DEBUG - Nouvelle combinaison secrète générée (DEBUG uniquement) : [<Couleur.ROUGE: '#e95e50'>, <Couleur.VIOLET: '#936fac'>, <Couleur.VERT: '#a1c65d'>, <Couleur.BLEU: '#0cb2af'>]
-2026-02-12 17:33:45,683 - MVC.model.historique - INFO - Partie 2 enregistrée dans l'historique.
-2026-02-12 17:33:47,665 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.VERT: '#a1c65d'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
-2026-02-12 17:33:47,698 - MVC.model.historique - INFO - Partie 2 enregistrée dans l'historique.
+2026-02-12 16:08:23,541 - MVC.model.mastermind - DEBUG - Initialisation du modÃ¨le Mastermind
+2026-02-12 16:08:30,527 - MVC.model.historique - INFO - Partie 2 enregistrÃ©e dans l'historique.
+2026-02-12 16:55:33,331 - MVC.model.mastermind - DEBUG - Initialisation du modÃ¨le Mastermind
+2026-02-12 16:55:40,401 - MVC.model.historique - INFO - Partie 2 enregistrÃ©e dans l'historique.
+2026-02-12 16:56:04,524 - MVC.model.historique - INFO - Partie 2 enregistrÃ©e dans l'historique.
+2026-02-12 16:56:18,479 - MVC.model.historique - INFO - Partie 2 enregistrÃ©e dans l'historique.
+2026-02-12 17:33:40,163 - MVC.model.mastermind - DEBUG - Initialisation du modÃ¨le Mastermind
+2026-02-12 17:33:43,971 - MVC.model.mastermind - DEBUG - VÃ©rification proposition : [<Couleur.JAUNE: '#fac723'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 17:33:45,675 - MVC.model.mastermind - DEBUG - Nouvelle combinaison secrÃ¨te gÃ©nÃ©rÃ©e (DEBUG uniquement) : [<Couleur.ROUGE: '#e95e50'>, <Couleur.VIOLET: '#936fac'>, <Couleur.VERT: '#a1c65d'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 17:33:45,683 - MVC.model.historique - INFO - Partie 2 enregistrÃ©e dans l'historique.
+2026-02-12 17:33:47,665 - MVC.model.mastermind - DEBUG - VÃ©rification proposition : [<Couleur.VERT: '#a1c65d'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-12 17:33:47,698 - MVC.model.historique - INFO - Partie 2 enregistrÃ©e dans l'historique.

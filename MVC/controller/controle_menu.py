@@ -69,6 +69,12 @@ class Controleur:
         
     def charger_derniere_session(self):
         h = historique()
+        donnees_totales = h.charger_historique()
+        if donnees_totales:
+            id_max = max(p.get("id", 0) for p in donnees_totales)
+            self.compteur_id = id_max + 1
+        else:
+            self.compteur_id = 1
         sauvegarde = h.charger_partie_en_cours()
         if sauvegarde:
             solution_enums = [Couleur[nom] for nom in sauvegarde["solution"]]
@@ -79,7 +85,6 @@ class Controleur:
                 combinaison_secrete=sauvegarde["solution"], 
                 historique_tentatives=sauvegarde["historique_couleurs"]
             )
-            self.compteur_id = sauvegarde["id"]
 
 if __name__ == "__main__":
     Controleur()

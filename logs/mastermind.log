@@ -126,3 +126,6 @@
 2026-02-12 17:53:15,267 - MVC.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
 2026-02-12 17:53:15,269 - MVC.model.historique - INFO - Partie 5 synchronisée dans l'historique.
 2026-02-12 17:53:15,272 - MVC.model.historique - INFO - Partie 5 synchronisée dans l'historique.
+2026-02-12 18:12:30,411 - MVC.model.mastermind - DEBUG - Initialisation du modèle Mastermind
+2026-02-12 18:12:31,735 - MVC.model.mastermind - DEBUG - Nouvelle combinaison secrète générée (DEBUG uniquement) : [<Couleur.ROUGE: '#e95e50'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.ORANGE: '#f29222'>, <Couleur.ORANGE: '#f29222'>]
+2026-02-12 18:12:31,736 - MVC.model.historique - INFO - Partie 6 synchronisée dans l'historique.

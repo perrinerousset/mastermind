@@ -21,3 +21,8 @@ dev = ["ruff","pylint"]
 [build-system]
 requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["MVC*"]
+exclude = ["logs*"]

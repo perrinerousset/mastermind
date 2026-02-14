@@ -1,6 +1,6 @@
 import pytest
 
-from MVC.model.mastermind import Couleur, Mastermind
+from mvc.model.mastermind import Couleur, Mastermind
 
 
 @pytest.fixture

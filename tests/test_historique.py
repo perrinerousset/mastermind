@@ -1,6 +1,6 @@
 import json
 
-from MVC.model.historique import Historique
+from mvc.model.historique import Historique
 
 
 def test_charger_historique_fichier_absent(tmp_path):

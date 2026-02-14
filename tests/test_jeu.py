@@ -1,6 +1,6 @@
 import pytest
 
-from MVC.model.jeu import Jeu
+from mvc.model.jeu import Jeu
 
 
 @pytest.fixture

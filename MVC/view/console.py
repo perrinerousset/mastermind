@@ -1,7 +1,7 @@
 import tkinter as tk
 
-from MVC.model.historique import Historique
-from MVC.model.mastermind import Couleur
+from mvc.model.historique import Historique
+from mvc.model.mastermind import Couleur
 
 
 class VueJeu:

@@ -1,12 +1,12 @@
 import tkinter as tk
 
-from MVC.model.historique import Historique
-from MVC.model.jeu import Jeu
-from MVC.model.mastermind import Couleur, Mastermind
-from MVC.view.console import VueJeu
-from MVC.view.vue_historique import VueHistorique
-from MVC.view.vue_principale import VuePrincipale
-from MVC.view.vue_regles_jeu import VueReglesJeu
+from mvc.model.historique import Historique
+from mvc.model.jeu import Jeu
+from mvc.model.mastermind import Couleur, Mastermind
+from mvc.view.console import VueJeu
+from mvc.view.vue_historique import VueHistorique
+from mvc.view.vue_principale import VuePrincipale
+from mvc.view.vue_regles_jeu import VueReglesJeu
 
 
 class Controleur:

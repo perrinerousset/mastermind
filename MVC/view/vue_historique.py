@@ -1,6 +1,6 @@
 import tkinter as tk
 
-from MVC.model.historique import Historique
+from mvc.model.historique import Historique
 
 
 class VueHistorique:

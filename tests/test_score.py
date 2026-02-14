@@ -1,6 +1,6 @@
 import pytest
 
-from MVC.model.score import Score
+from mvc.model.score import Score
 
 
 def test_score_initialisation():

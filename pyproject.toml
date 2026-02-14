@@ -28,7 +28,7 @@ include = ["mvc*"]
 exclude = ["logs*"]
 
 [tool.pytest.ini_options]
-pythonpath = ["."]
+pythonpath = [".", "mvc"]
 
 [tool.ruff]
 # Longueur de ligne standard (comme Black)

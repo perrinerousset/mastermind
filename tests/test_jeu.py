@@ -33,6 +33,12 @@ def test_sauvegarder_partie():
 
     sauvegarde = jeu.sauvegarder_partie()
 
-    assert sauvegarde == {"id": 1, "score": 20, "tentatives": 4, "victoire": True,
-                           "solution": [], "historique_couleurs": [],"en_cours": False,
-                        }
+    assert sauvegarde == {
+        "id": 1,
+        "score": 20,
+        "tentatives": 4,
+        "victoire": True,
+        "solution": [],
+        "historique_couleurs": [],
+        "en_cours": False,
+    }

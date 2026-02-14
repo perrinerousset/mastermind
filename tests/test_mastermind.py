@@ -36,7 +36,7 @@ def test_verification_4_rouges(jeu):
 
 
 def test_verification_4_blancs(jeu):
-    jeu.combinaison_secrete_bis= [
+    jeu.combinaison_secrete_bis = [
         Couleur.BLEU,
         Couleur.ROUGE,
         Couleur.VERT,

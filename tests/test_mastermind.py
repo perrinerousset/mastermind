@@ -9,19 +9,19 @@ def jeu():
 
 
 def test_liste_couleur(jeu):
-    assert jeu.ListeCouleur == list(Couleur)
+    assert jeu.liste_couleur == list(Couleur)
 
 
 def test_generation_combinaison_secrete(jeu):
-    jeu.Combinaison_secrete()
-    combinaison = jeu.CombinaisonSecrete
+    jeu.combinaison_secrete()
+    combinaison = jeu.combinaison_secrete_bis
     assert len(combinaison) == 4
     for couleur in combinaison:
         assert couleur in Couleur
 
 
 def test_verification_4_rouges(jeu):
-    jeu._mastermind__CombinaisonSecrete = [
+    jeu._mastermind__combinaison_secrete = [
         Couleur.BLEU,
         Couleur.ROUGE,
         Couleur.VERT,
@@ -36,7 +36,7 @@ def test_verification_4_rouges(jeu):
 
 
 def test_verification_4_blancs(jeu):
-    jeu._mastermind__CombinaisonSecrete = [
+    jeu._mastermind__combinaison_secrete = [
         Couleur.BLEU,
         Couleur.ROUGE,
         Couleur.VERT,
@@ -51,7 +51,7 @@ def test_verification_4_blancs(jeu):
 
 
 def test_verification_mixte(jeu):
-    jeu._mastermind__CombinaisonSecrete = [
+    jeu._mastermind__combinaison_secrete = [
         Couleur.BLEU,
         Couleur.ROUGE,
         Couleur.VERT,
@@ -80,7 +80,7 @@ def test_verification_mixte(jeu):
     ],
 )
 def test_victoire(jeu, proposition, resultat_attendu):
-    jeu._mastermind__CombinaisonSecrete = [
+    jeu._mastermind__combinaison_secrete = [
         Couleur.VIOLET,
         Couleur.ORANGE,
         Couleur.ROUGE,

@@ -21,7 +21,7 @@ def test_generation_combinaison_secrete(jeu):
 
 
 def test_verification_4_rouges(jeu):
-    jeu._mastermind__combinaison_secrete = [
+    jeu.combinaison_secrete_bis = [
         Couleur.BLEU,
         Couleur.ROUGE,
         Couleur.VERT,
@@ -36,7 +36,7 @@ def test_verification_4_rouges(jeu):
 
 
 def test_verification_4_blancs(jeu):
-    jeu._mastermind__combinaison_secrete = [
+    jeu.combinaison_secrete_bis= [
         Couleur.BLEU,
         Couleur.ROUGE,
         Couleur.VERT,
@@ -51,7 +51,7 @@ def test_verification_4_blancs(jeu):
 
 
 def test_verification_mixte(jeu):
-    jeu._mastermind__combinaison_secrete = [
+    jeu.combinaison_secrete_bis = [
         Couleur.BLEU,
         Couleur.ROUGE,
         Couleur.VERT,
@@ -80,7 +80,7 @@ def test_verification_mixte(jeu):
     ],
 )
 def test_victoire(jeu, proposition, resultat_attendu):
-    jeu._mastermind__combinaison_secrete = [
+    jeu.combinaison_secrete_bis = [
         Couleur.VIOLET,
         Couleur.ORANGE,
         Couleur.ROUGE,

@@ -22,11 +22,12 @@ dev = ["ruff","pylint"]
 requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools]
-packages = ["mvc", "mvc.model"]
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mvc", "mvc.*"]
 
 [tool.pytest.ini_options]
-pythonpath = [".", "mvc"]
+pythonpath = ["."]
 
 [tool.ruff]
 # Longueur de ligne standard (comme Black)

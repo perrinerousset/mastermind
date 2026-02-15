@@ -5,7 +5,7 @@ from mvc.model.mastermind import Couleur
 
 
 class VueJeu:
-    def __init__(self, parent_frame, modele, controleur)-> None:
+    def __init__(self, parent_frame, modele, controleur) -> None:
         self.parent = parent_frame
         self.modele = modele
         self.controleur = controleur
@@ -65,10 +65,10 @@ class VueJeu:
         )
         self.label_score.pack(pady=5)
 
-    def redessiner_sur_parent(self, nouveau_parent)-> None:
+    def redessiner_sur_parent(self, nouveau_parent) -> None:
         self.frame_principale.pack(in_=nouveau_parent, expand=True, fill="both")
 
-    def dessiner_nouvelle_ligne(self, i)-> None:
+    def dessiner_nouvelle_ligne(self, i) -> None:
         y_ligne = self.offset_y + (i * self.hauteur_ligne)
         btn = tk.Button(
             self.canvas,
@@ -129,7 +129,7 @@ class VueJeu:
             fill="white",
         )
 
-    def changer_couleur(self, ligne, index_pion)-> None:
+    def changer_couleur(self, ligne, index_pion) -> None:
         if ligne != self.ligne_actuelle:
             return
         couleur_actuelle = self.etat_pions[ligne][index_pion]
@@ -140,7 +140,7 @@ class VueJeu:
             self.pions_graphiques[ligne][index_pion], fill=prochaine_couleur.value
         )
 
-    def valider_ligne(self, ligne)-> None:
+    def valider_ligne(self, ligne) -> None:
         proposition = self.etat_pions[ligne]
         rouges, blancs = self.modele.verification_proposition(proposition)
         res = self.resultats_graphiques[ligne]
@@ -171,7 +171,7 @@ class VueJeu:
             self.controleur.enregistrer_partie(False, 12)
             self.message("perdu")
 
-    def message(self, etat)-> None:
+    def message(self, etat) -> None:
         etat = etat.lower()
         if etat == "victoire":
             tentatives = self.ligne_actuelle + 1
@@ -195,7 +195,7 @@ class VueJeu:
             self.label_score.config(text="")
         self.zone_message.config(text=texte, bg=couleur)
 
-    def dessiner_solution_finale(self)-> None:
+    def dessiner_solution_finale(self) -> None:
         self.canvas_solution.delete("all")
         y_centre = 30
         self.canvas_solution.create_text(
@@ -213,7 +213,7 @@ class VueJeu:
                 width=2,
             )
 
-    def restaurer_visuel(self, historique_couleurs)-> None:
+    def restaurer_visuel(self, historique_couleurs) -> None:
         self.ligne_actuelle = 0
         for i, noms_couleurs in enumerate(historique_couleurs):
             self.etat_pions[i] = [Couleur[nom] for nom in noms_couleurs]

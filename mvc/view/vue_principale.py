@@ -2,7 +2,7 @@ import tkinter as tk
 
 
 class VuePrincipale:
-    def __init__(self, root, controleur)->None:
+    def __init__(self, root, controleur) -> None:
         self.root = root
         self.controleur = controleur
 
@@ -15,7 +15,7 @@ class VuePrincipale:
 
         self.dessiner_menu_permanent()
 
-    def dessiner_menu_permanent(self)->None:
+    def dessiner_menu_permanent(self) -> None:
         tk.Label(
             self.zone_laterale,
             text="MASTERMIND",
@@ -42,7 +42,7 @@ class VuePrincipale:
             command=self.controleur.afficher_regles,
         ).pack(fill="x", padx=10, pady=5)
 
-    def nettoyer_zone_centrale(self)->None:
+    def nettoyer_zone_centrale(self) -> None:
         for widget in self.zone_centrale.winfo_children():
             if (
                 self.controleur.vue_jeu_active

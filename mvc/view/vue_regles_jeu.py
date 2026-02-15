@@ -2,7 +2,7 @@ import tkinter as tk
 
 
 class VueReglesJeu:
-    def __init__(self, parent, modele_jeu=None)->None:
+    def __init__(self, parent, modele_jeu=None) -> None:
         self.parent = parent
         self.frame_principale = tk.Frame(self.parent, bg="white")
         self.frame_principale.pack(fill="both", expand=True)

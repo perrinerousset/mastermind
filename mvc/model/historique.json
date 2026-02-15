@@ -822,7 +822,7 @@
     {
         "id": 15,
         "score": 0,
-        "tentatives": 1,
+        "tentatives": 2,
         "victoire": false,
         "solution": [
             "VIOLET",
@@ -836,8 +836,55 @@
                 "VERT",
                 "BLEU",
                 "BLEU"
+            ],
+            [
+                "VERT",
+                "VERT",
+                "BLEU",
+                "BLEU"
             ]
         ],
+        "en_cours": true
+    },
+    {
+        "id": 16,
+        "score": 0,
+        "tentatives": 2,
+        "victoire": false,
+        "solution": [
+            "VERT",
+            "VIOLET",
+            "VIOLET",
+            "VERT"
+        ],
+        "historique_couleurs": [
+            [
+                "VERT",
+                "BLEU",
+                "ORANGE",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ]
+        ],
+        "en_cours": true
+    },
+    {
+        "id": 17,
+        "score": 0,
+        "tentatives": 0,
+        "victoire": false,
+        "solution": [
+            "BLEU",
+            "BLEU",
+            "JAUNE",
+            "ROUGE"
+        ],
+        "historique_couleurs": [],
         "en_cours": true
     }
 ]

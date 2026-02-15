@@ -29,7 +29,7 @@ class Historique:
                 donnees_partie.get("id", "?"),
             )
 
-    def charger_historique(self)-> Optional[dict]:
+    def charger_historique(self) -> Optional[dict]:
         if not os.path.exists(self.filename):
             return []
         try:
@@ -40,12 +40,12 @@ class Historique:
 
     def charger_partie_en_cours(self) -> Optional[dict]:
         donnees = self.charger_historique()
-        for partie in reversed(donnees): 
+        for partie in reversed(donnees):
             if partie.get("en_cours"):
                 return partie
         return None
 
-    def charger_parties_terminees(self)-> list:
+    def charger_parties_terminees(self) -> list:
         donnees = self.charger_historique()
         parties_a_afficher = []
         for p in donnees:

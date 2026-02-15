@@ -16,7 +16,7 @@ class Couleur(Enum):
 
 
 class Mastermind:
-    def __init__(self)-> None:
+    def __init__(self) -> None:
         self.__ListeCouleur = list(Couleur)
         self.__CombinaisonSecrete = []
         logger.debug("Initialisation du modèle Mastermind")
@@ -36,7 +36,7 @@ class Mastermind:
             self.__CombinaisonSecrete,
         )
 
-    def verification_proposition(self, liste_proposition)-> Tuple[int, int]:
+    def verification_proposition(self, liste_proposition) -> Tuple[int, int]:
         logger.debug("Vérification proposition : %s", liste_proposition)
         rouges = 0
         blancs = 0
@@ -60,10 +60,10 @@ class Mastermind:
                     combi_secrete.remove(liste_prop[i])
         return rouges, blancs
 
-    def victoire(self, liste_proposition)-> bool:
+    def victoire(self, liste_proposition) -> bool:
         return list(liste_proposition) == list(self.__CombinaisonSecrete)
 
     @combinaison_secrete_bis.setter
-    def combinaison_secrete_bis(self, liste_enums):  
+    def combinaison_secrete_bis(self, liste_enums):
         # on focre la combi secrete car sinon ba ça prend une nouvelle...
         self.__CombinaisonSecrete = liste_enums

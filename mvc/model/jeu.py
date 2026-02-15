@@ -11,7 +11,7 @@ class Jeu:
         est_gagne=False,
         combinaison_secrete=None,
         historique_tentatives=None,
-    )-> None:
+    ) -> None:
         self.historique_tentatives = historique_tentatives or []
         self.__id_partie = id_partie
         self.__nb_tentatives = (
@@ -24,31 +24,31 @@ class Jeu:
         self.gestionnaire_score = Score()
         self.__score = 0
 
-    def get_id_partie(self)-> int:
+    def get_id_partie(self) -> int:
         return self.__id_partie
 
-    def get_nb_tentatives(self)->int:
+    def get_nb_tentatives(self) -> int:
         return self.__nb_tentatives
 
-    def get_est_gagne(self)->bool:
+    def get_est_gagne(self) -> bool:
         return self.__est_gagne
 
-    def get_score(self)->int:
+    def get_score(self) -> int:
         return self.__score
 
-    def set_nb_tentatives(self, v: int)->int:
+    def set_nb_tentatives(self, v: int) -> int:
         self.__nb_tentatives = v
         return self.__nb_tentatives
 
-    def set_est_gagne(self, v: bool)->bool:
+    def set_est_gagne(self, v: bool) -> bool:
         self.__est_gagne = v
         return self.__est_gagne
 
-    def set_score(self, v: int)->int:
+    def set_score(self, v: int) -> int:
         self.__score = v
         return self.__score
 
-    def terminer_partie(self, a_gagne: bool, nb_tours_finaux: int)->int:
+    def terminer_partie(self, a_gagne: bool, nb_tours_finaux: int) -> int:
         self.set_est_gagne(a_gagne)
         self.set_nb_tentatives(nb_tours_finaux)
         self.set_score(
@@ -56,13 +56,13 @@ class Jeu:
         )
         return self.__score
 
-    def ajouter_tentative(self, liste_couleurs_enum)-> None:
+    def ajouter_tentative(self, liste_couleurs_enum) -> None:
         noms = [
             c.name for c in liste_couleurs_enum
         ]  # On transforme l'objet Enum en String pour le JSON
         self.historique_tentatives.append(noms)
 
-    def sauvegarder_partie(self)-> Dict:
+    def sauvegarder_partie(self) -> Dict:
         return {
             "id": self.__id_partie,
             "score": self.__score,

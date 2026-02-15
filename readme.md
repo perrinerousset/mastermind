@@ -42,7 +42,7 @@ Le fonctionnement du remplissage est le suivant : Le Contrôleur appelle la mét
 
 
 
-#### II. Faire fonctionner l'application
+#### II. Lancer l'application
 
 
 

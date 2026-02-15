@@ -787,3 +787,4 @@
 2026-02-15 22:57:22,983 - mvc.model.historique - INFO - Partie 3 synchronisée dans l'historique.
 2026-02-15 22:57:34,657 - mvc.model.mastermind - DEBUG - Nouvelle combinaison secrète générée (DEBUG uniquement) : [<Couleur.ORANGE: '#f29222'>, <Couleur.ORANGE: '#f29222'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.ROUGE: '#e95e50'>]
 2026-02-15 22:57:34,658 - mvc.model.historique - INFO - Partie 4 synchronisée dans l'historique.
+2026-02-15 23:01:38,984 - mvc.model.mastermind - DEBUG - Initialisation du modèle Mastermind

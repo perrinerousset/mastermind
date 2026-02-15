@@ -822,7 +822,7 @@
     {
         "id": 15,
         "score": 0,
-        "tentatives": 0,
+        "tentatives": 1,
         "victoire": false,
         "solution": [
             "VIOLET",
@@ -830,7 +830,14 @@
             "VIOLET",
             "VERT"
         ],
-        "historique_couleurs": [],
+        "historique_couleurs": [
+            [
+                "VERT",
+                "VERT",
+                "BLEU",
+                "BLEU"
+            ]
+        ],
         "en_cours": true
     }
 ]

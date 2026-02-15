@@ -1,5 +1,6 @@
-from .score import Score
 from typing import Dict
+
+from .score import Score
 
 
 class Jeu:

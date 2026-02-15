@@ -1,7 +1,7 @@
 import logging
 import random
 from enum import Enum
-from typing import List, Tuple
+from typing import Tuple
 
 logger = logging.getLogger(__name__)
 

@@ -166,7 +166,8 @@ class VueJeu:
         if self.modele.victoire(
             proposition
         ):  # vérification de la victoire à chaque fois qu'on valide une ligne
-            self.controleur.enregistrer_partie(True, ligne + 1)
+            self.controleur.partie_objet.terminer_partie(True, ligne + 1)
+            Historique().ajouter_au_fichier(self.controleur.partie_objet)
             self.message("victoire")
             return
         self.ligne_actuelle += 1  # Passage à la ligne suivante

@@ -60,7 +60,7 @@ python main.py
 
 
 
-???????
+Notre projet Mastermind peut être installé à l'aide de la commande pip install-e . Cette dernière télécharge les dépendances nécessaires à l'exécution du programme. Pour ce qui est de la majorité des imports de la partie mvc, ils sont disponible avec l'installation de python.
 
 
 

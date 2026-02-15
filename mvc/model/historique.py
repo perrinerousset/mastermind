@@ -1,6 +1,12 @@
+"""
+Module de gestion de l'historique des parties de Mastermind.
+Ce module permet de sauvegarder, charger et filtrer les sessions de jeu.
+"""  # le ruff demande qu'on écrive ça c'est l'erreur C0114/5/6: Docstring manquante
+
 import json
 import logging
 import os
+from typing import Optional
 
 logger = logging.getLogger(__name__)
 
@@ -28,7 +34,7 @@ class Historique:
                 donnees_partie.get("id", "?"),
             )
 
-    def charger_historique(self):
+    def charger_historique(self) -> Optional[dict]:
         if not os.path.exists(self.filename):
             return []
         try:
@@ -37,14 +43,14 @@ class Historique:
         except json.JSONDecodeError:
             return []
 
-    def charger_partie_en_cours(self):
+    def charger_partie_en_cours(self) -> Optional[dict]:
         donnees = self.charger_historique()
-        for partie in reversed(donnees):  # On regarde la plus récente
+        for partie in reversed(donnees):
             if partie.get("en_cours"):
                 return partie
         return None
 
-    def charger_parties_terminees(self):
+    def charger_parties_terminees(self) -> list:
         donnees = self.charger_historique()
         parties_a_afficher = []
         for p in donnees:

@@ -1,3 +1,7 @@
+"""
+test pour historique
+"""  # le ruff demande qu'on écrive ça c'est l'erreur C0114/5/6: Docstring manquante
+
 import json
 
 from mvc.model.historique import Historique

@@ -1,10 +1,14 @@
+"""
+Affichage de la page historique
+"""  # le ruff demande qu'on écrive ça c'est l'erreur C0114/5/6: Docstring manquante
+
 import tkinter as tk
 
 from mvc.model.historique import Historique
 
 
 class VueHistorique:
-    def __init__(self, parent, modele_jeu=None):
+    def __init__(self, parent, modele_jeu=None) -> None:
 
         self.parent = parent
 
@@ -55,7 +59,7 @@ class VueHistorique:
 
         self.charger_et_afficher()
 
-    def charger_et_afficher(self):
+    def charger_et_afficher(self) -> None:
 
         self.liste_box.delete(0, tk.END)
         h = Historique()

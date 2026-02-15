@@ -1,3 +1,8 @@
+"""
+Fait le lien entre l'appuit sur les boutons du menu
+et l'action : remplissage des vues'
+"""  # le ruff demande qu'on écrive ça c'est l'erreur C0114/5/6: Docstring manquante
+
 import tkinter as tk
 
 from mvc.model.historique import Historique
@@ -10,7 +15,7 @@ from mvc.view.vue_regles_jeu import VueReglesJeu
 
 
 class Controleur:
-    def __init__(self):
+    def __init__(self) -> None:
         self.root = tk.Tk()
         self.root.title("Mastermind Projet")
         self.modele = Mastermind()
@@ -23,7 +28,7 @@ class Controleur:
         self.charger_derniere_session()
         self.root.mainloop()
 
-    def afficher_accueil(self):
+    def afficher_accueil(self) -> None:
         self.vue_principale.nettoyer_zone_centrale()
         tk.Label(
             self.vue_principale.zone_centrale,
@@ -32,7 +37,7 @@ class Controleur:
             bg="white",
         ).pack(expand=True)
 
-    def nouvelle_partie(self):
+    def nouvelle_partie(self) -> None:
         if self.partie_objet:
             self.historique_parties.append(self.partie_objet)
         if self.vue_jeu_active:
@@ -50,7 +55,7 @@ class Controleur:
             self.vue_principale.zone_centrale, self.modele, self
         )
 
-    def afficher_jeu(self):
+    def afficher_jeu(self) -> None:
         self.vue_principale.nettoyer_zone_centrale()
         if self.vue_jeu_active:
             self.vue_jeu_active.redessiner_sur_parent(self.vue_principale.zone_centrale)
@@ -61,21 +66,21 @@ class Controleur:
         else:
             self.nouvelle_partie()
 
-    def afficher_historique(self):
+    def afficher_historique(self) -> None:
         self.vue_principale.nettoyer_zone_centrale()
         VueHistorique(self.vue_principale.zone_centrale, self.modele)
 
-    def afficher_regles(self):
+    def afficher_regles(self) -> None:
         self.vue_principale.nettoyer_zone_centrale()
         VueReglesJeu(self.vue_principale.zone_centrale, self.modele)
 
-    def enregistrer_partie(self, victoire: bool, tentatives: int):
+    def enregistrer_partie(self, victoire: bool, tentatives: int) -> None:
         if not self.partie_objet:
             return
         self.partie_objet.terminer_partie(victoire, tentatives)
         Historique().ajouter_au_fichier(self.partie_objet)
 
-    def charger_derniere_session(self):
+    def charger_derniere_session(self) -> None:
         h = Historique()
         donnees_totales = h.charger_historique()
         if donnees_totales:

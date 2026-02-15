@@ -1,8 +1,12 @@
+"""
+Affichage et gestion du menu avec les trois boutons.
+"""  # le ruff demande qu'on écrive ça c'est l'erreur C0114/5/6: Docstring manquante
+
 import tkinter as tk
 
 
 class VuePrincipale:
-    def __init__(self, root, controleur):
+    def __init__(self, root, controleur) -> None:
         self.root = root
         self.controleur = controleur
 
@@ -15,7 +19,7 @@ class VuePrincipale:
 
         self.dessiner_menu_permanent()
 
-    def dessiner_menu_permanent(self):
+    def dessiner_menu_permanent(self) -> None:
         tk.Label(
             self.zone_laterale,
             text="MASTERMIND",
@@ -42,7 +46,7 @@ class VuePrincipale:
             command=self.controleur.afficher_regles,
         ).pack(fill="x", padx=10, pady=5)
 
-    def nettoyer_zone_centrale(self):
+    def nettoyer_zone_centrale(self) -> None:
         for widget in self.zone_centrale.winfo_children():
             if (
                 self.controleur.vue_jeu_active

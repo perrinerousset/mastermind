@@ -1,12 +1,17 @@
+"""
+gestion du score (calcul)
+"""  # le ruff demande qu'on écrive ça c'est l'erreur C0114/5/6: Docstring manquante
+
+
 class Score:
     def __init__(self):
         self.__valeur_score = 0
         self.__tentatives_max = 12
 
-    def get_valeur_score(self):
+    def get_valeur_score(self) -> int:
         return self.__valeur_score
 
-    def calculer(self, nb_tentatives):
+    def calculer(self, nb_tentatives) -> int:
         # Si le joueur trouve en 1 tour : 1200 points.
         # Si le joueur trouve en 12 tours : 100 point. (bref c'est 1200 -100*tentatives)
         if nb_tentatives > self.__tentatives_max:
@@ -15,5 +20,5 @@ class Score:
             self.__valeur_score = ((self.__tentatives_max - nb_tentatives) + 1) * 100
         return self.__valeur_score
 
-    def reinitialiser(self):
+    def reinitialiser(self) -> None:
         self.__valeur_score = 0

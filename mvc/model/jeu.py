@@ -48,7 +48,7 @@ class Jeu:
     def set_est_gagne(self, valeur: bool) -> bool:
         self.__est_gagne = valeur
         if valeur:
-            self.en_cours = False
+            self.__en_cours = False
         return self.__est_gagne
 
     def set_score(self, v: int) -> int:

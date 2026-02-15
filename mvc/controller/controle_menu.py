@@ -39,7 +39,10 @@ class Controleur:
 
     def nouvelle_partie(self) -> None:
         if self.partie_objet:
-            self.historique_parties.append(self.partie_objet)
+            # Si la partie n'est pas gagnée et qu'il reste des essais, c'est un abandon
+            essais_actuels = self.partie_objet.get_nb_tentatives()
+            if not self.partie_objet.get_est_gagne() and essais_actuels < 12:
+                self.enregistrer_partie(victoire=False, tentatives=essais_actuels)
         if self.vue_jeu_active:
             self.vue_jeu_active.frame_principale.destroy()
             self.vue_jeu_active = None
@@ -79,6 +82,7 @@ class Controleur:
             return
         self.partie_objet.terminer_partie(victoire, tentatives)
         Historique().ajouter_au_fichier(self.partie_objet)
+        self.partie_objet = None
 
     def charger_derniere_session(self) -> None:
         h = Historique()
@@ -88,7 +92,9 @@ class Controleur:
             self.compteur_id = id_max + 1
         else:
             self.compteur_id = 1
+
         sauvegarde = h.charger_partie_en_cours()
+
         if sauvegarde:
             solution_enums = [Couleur[nom] for nom in sauvegarde["solution"]]
             self.modele.combinaison_secrete_bis = solution_enums
@@ -98,6 +104,9 @@ class Controleur:
                 combinaison_secrete=sauvegarde["solution"],
                 historique_tentatives=sauvegarde["historique_couleurs"],
             )
+            self.afficher_jeu()
+        else:
+            self.nouvelle_partie()
 
 
 if __name__ == "__main__":

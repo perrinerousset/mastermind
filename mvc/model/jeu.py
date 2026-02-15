@@ -41,12 +41,14 @@ class Jeu:
     def get_score(self) -> int:
         return self.__score
 
-    def set_nb_tentatives(self, v: int) -> int:
-        self.__nb_tentatives = v
+    def set_nb_tentatives(self, valeur: int) -> int:
+        self.__nb_tentatives = valeur
         return self.__nb_tentatives
 
-    def set_est_gagne(self, v: bool) -> bool:
-        self.__est_gagne = v
+    def set_est_gagne(self, valeur: bool) -> bool:
+        self.__est_gagne = valeur
+        if valeur:
+            self.en_cours = False
         return self.__est_gagne
 
     def set_score(self, v: int) -> int:

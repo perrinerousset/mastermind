@@ -40,6 +40,32 @@ Le fonctionnement du remplissage est le suivant : Le Contrôleur appelle la mét
 
 
 
+##### C) Jouer au mastermind 
+
+
+
+La prise en main du jeu est très facile. Il suffit de changer les couleurs en appuyant sur les ronds (initialement bleu) puis d'appuyer sur le bouton "valider" à droite de votre ligne pour suggérer une proposition. Une fois le bouton "valider" un chiffre suivit d'un pion rouge indiquera le nombre de ronds de couleurs de la bonne couleur ET bien placés, ainsi qu'un chiffre suivit d'un pion blanc indiquera le nombre de ronds de couleurs de la bonne couleur MAIS mal placés. 
+
+Notons que l'ordre des couleurs lors de l'appui est le suivant : Bleu, vert, jaune, orange, rouge, violet pour un total de six couleurs. La boucle de couleur recommence dès que vous appuyez sur le violet : Rouge, violet, bleu, vert…
+
+
+
+Pour plus de renseignement sur les règles du jeu, il suffit de se rendre sur notre page dédiée en cliquant sur le bouton "Règles du jeu". 
+
+
+
+##### D) Gestion du score 
+
+
+
+Le score peut être visualisé lorsque que vous perdez (score =0) ou gagnez. Il est également affiché dans l'onglet historique. 
+
+Si le joueur trouve en 1 tour il gagne 1200 points. Si le joueur trouve en 12 tours il gagne 100 points. Le calcul est donc le suivant : score = 1200 -100\*nbr de tentatives
+
+
+
+
+
 
 
 #### II. Lancer l'application

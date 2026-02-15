@@ -8,7 +8,6 @@ from mvc.model.mastermind import Mastermind
 
 
 class ControleurTestable(Controleur):
-
     def __init__(self) -> None:
         self.root = None
         self.modele = Mastermind()

@@ -963,7 +963,7 @@
     {
         "id": 18,
         "score": 0,
-        "tentatives": 0,
+        "tentatives": 2,
         "victoire": false,
         "solution": [
             "ORANGE",
@@ -971,7 +971,20 @@
             "JAUNE",
             "JAUNE"
         ],
-        "historique_couleurs": [],
+        "historique_couleurs": [
+            [
+                "BLEU",
+                "VERT",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ]
+        ],
         "en_cours": true
     }
 ]

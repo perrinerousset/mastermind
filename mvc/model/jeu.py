@@ -27,6 +27,7 @@ class Jeu:
         self.combinaison_secrete = combinaison_secrete or []
         self.gestionnaire_score = Score()
         self.__score = 0
+        self.__en_cours = True
 
     def get_id_partie(self) -> int:
         return self.__id_partie
@@ -58,6 +59,7 @@ class Jeu:
         self.set_score(
             self.gestionnaire_score.calculer(nb_tours_finaux) if a_gagne else 0
         )
+        self.__en_cours = False
         return self.__score
 
     def ajouter_tentative(self, liste_couleurs_enum) -> None:
@@ -74,5 +76,5 @@ class Jeu:
             "victoire": self.__est_gagne,
             "solution": self.combinaison_secrete,
             "historique_couleurs": self.historique_tentatives,
-            "en_cours": not self.__est_gagne and self.__nb_tentatives < 12,
+            "en_cours": self.__en_cours,
         }

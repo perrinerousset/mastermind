@@ -45,9 +45,11 @@ class Historique:
 
     def charger_partie_en_cours(self) -> Optional[dict]:
         donnees = self.charger_historique()
-        for partie in reversed(donnees):
-            if partie.get("en_cours"):
-                return partie
+        if not donnees:
+            return None
+        derniere_partie = donnees[-1]
+        if derniere_partie.get("en_cours"):
+            return derniere_partie
         return None
 
     def charger_parties_terminees(self) -> list:

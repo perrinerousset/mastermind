@@ -263,3 +263,15 @@
 2026-02-14 16:26:30,803 - mvc.model.historique - INFO - Partie 13 synchronisée dans l'historique.
 2026-02-14 16:26:48,880 - mvc.model.mastermind - DEBUG - Nouvelle combinaison secrète générée (DEBUG uniquement) : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.VIOLET: '#936fac'>, <Couleur.JAUNE: '#fac723'>]
 2026-02-14 16:26:48,883 - mvc.model.historique - INFO - Partie 14 synchronisée dans l'historique.
+2026-02-15 13:02:59,387 - mvc.model.mastermind - DEBUG - Initialisation du modèle Mastermind
+2026-02-15 13:03:41,132 - mvc.model.mastermind - DEBUG - Vérification proposition : [<Couleur.VERT: '#a1c65d'>, <Couleur.VERT: '#a1c65d'>, <Couleur.ORANGE: '#f29222'>, <Couleur.ORANGE: '#f29222'>]
+2026-02-15 13:03:41,154 - mvc.model.historique - INFO - Partie 14 synchronisée dans l'historique.
+2026-02-15 13:03:49,643 - mvc.model.mastermind - DEBUG - Vérification proposition : [<Couleur.JAUNE: '#fac723'>, <Couleur.JAUNE: '#fac723'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>]
+2026-02-15 13:03:49,651 - mvc.model.historique - INFO - Partie 14 synchronisée dans l'historique.
+2026-02-15 13:03:58,699 - mvc.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.JAUNE: '#fac723'>, <Couleur.ROUGE: '#e95e50'>]
+2026-02-15 13:03:58,705 - mvc.model.historique - INFO - Partie 14 synchronisée dans l'historique.
+2026-02-15 13:04:06,304 - mvc.model.mastermind - DEBUG - Vérification proposition : [<Couleur.BLEU: '#0cb2af'>, <Couleur.BLEU: '#0cb2af'>, <Couleur.VIOLET: '#936fac'>, <Couleur.JAUNE: '#fac723'>]
+2026-02-15 13:04:06,309 - mvc.model.historique - INFO - Partie 14 synchronisée dans l'historique.
+2026-02-15 13:04:06,315 - mvc.model.historique - INFO - Partie 14 synchronisée dans l'historique.
+2026-02-15 13:04:09,843 - mvc.model.mastermind - DEBUG - Nouvelle combinaison secrète générée (DEBUG uniquement) : [<Couleur.VIOLET: '#936fac'>, <Couleur.VIOLET: '#936fac'>, <Couleur.VIOLET: '#936fac'>, <Couleur.VERT: '#a1c65d'>]
+2026-02-15 13:04:09,846 - mvc.model.historique - INFO - Partie 15 synchronisée dans l'historique.

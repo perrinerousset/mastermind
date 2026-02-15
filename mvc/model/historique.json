@@ -782,14 +782,53 @@
     },
     {
         "id": 14,
-        "score": 0,
-        "tentatives": 0,
-        "victoire": false,
+        "score": 900,
+        "tentatives": 4,
+        "victoire": true,
         "solution": [
             "BLEU",
             "BLEU",
             "VIOLET",
             "JAUNE"
+        ],
+        "historique_couleurs": [
+            [
+                "VERT",
+                "VERT",
+                "ORANGE",
+                "ORANGE"
+            ],
+            [
+                "JAUNE",
+                "JAUNE",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "BLEU",
+                "JAUNE",
+                "ROUGE"
+            ],
+            [
+                "BLEU",
+                "BLEU",
+                "VIOLET",
+                "JAUNE"
+            ]
+        ],
+        "en_cours": false
+    },
+    {
+        "id": 15,
+        "score": 0,
+        "tentatives": 0,
+        "victoire": false,
+        "solution": [
+            "VIOLET",
+            "VIOLET",
+            "VIOLET",
+            "VERT"
         ],
         "historique_couleurs": [],
         "en_cours": true

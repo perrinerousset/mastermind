@@ -876,7 +876,7 @@
     {
         "id": 17,
         "score": 0,
-        "tentatives": 0,
+        "tentatives": 2,
         "victoire": false,
         "solution": [
             "BLEU",
@@ -884,7 +884,20 @@
             "JAUNE",
             "ROUGE"
         ],
-        "historique_couleurs": [],
+        "historique_couleurs": [
+            [
+                "JAUNE",
+                "VERT",
+                "BLEU",
+                "BLEU"
+            ],
+            [
+                "BLEU",
+                "BLEU",
+                "BLEU",
+                "BLEU"
+            ]
+        ],
         "en_cours": true
     }
 ]

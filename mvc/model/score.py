@@ -1,3 +1,8 @@
+"""
+gestion du score (calcul)
+"""  # le ruff demande qu'on écrive ça c'est l'erreur C0114/5/6: Docstring manquante
+
+
 class Score:
     def __init__(self):
         self.__valeur_score = 0

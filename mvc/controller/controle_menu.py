@@ -1,3 +1,8 @@
+"""
+Fait le lien entre l'appuit sur les boutons du menu
+et l'action : remplissage des vues'
+"""  # le ruff demande qu'on écrive ça c'est l'erreur C0114/5/6: Docstring manquante
+
 import tkinter as tk
 
 from mvc.model.historique import Historique

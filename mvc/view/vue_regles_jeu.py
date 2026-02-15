@@ -1,3 +1,7 @@
+"""
+Gestion de l'affichage des règles du jeu'
+"""  # le ruff demande qu'on écrive ça c'est l'erreur C0114/5/6: Docstring manquante
+
 import tkinter as tk
 
 
@@ -22,10 +26,10 @@ class VueReglesJeu:
         regles_texte = (
             "BUT DU JEU :\n"
             "L'objectif du mastermind est de déterminer la combinaison"
-            "secrète de 4 pions colorés choisie par l'ordinateur.\n\n"
+            " secrète de 4 pions colorés choisie par l'ordinateur.\n\n"
             " DÉROULEMENT :\n"
             "À chaque tour, proposez une combinaison sur la ligne active en cliquant"
-            "sur les pions afin de leur faire changer de couleur.\n"
+            " sur les pions afin de leur faire changer de couleur.\n"
             "Après validation, des indices s'affichent à droite :\n\n"
             "Pion Rouge : Une couleur est correcte et bien placée.\n"
             "Pion Blanc : Une couleur est correcte mais mal placée.\n\n"

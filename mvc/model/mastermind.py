@@ -1,3 +1,8 @@
+"""
+Gestion de la vérification des tentatives, vérification de la victoire,
+création de la combinaison secrète
+"""  # le ruff demande qu'on écrive ça c'est l'erreur C0114/5/6: Docstring manquante
+
 import logging
 import random
 from enum import Enum

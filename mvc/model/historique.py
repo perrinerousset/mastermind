@@ -1,3 +1,8 @@
+"""
+Module de gestion de l'historique des parties de Mastermind.
+Ce module permet de sauvegarder, charger et filtrer les sessions de jeu.
+"""  # le ruff demande qu'on écrive ça c'est l'erreur C0114/5/6: Docstring manquante
+
 import json
 import logging
 import os

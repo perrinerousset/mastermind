@@ -1,3 +1,7 @@
+"""
+Affichage et gestion du menu avec les trois boutons.
+"""  # le ruff demande qu'on écrive ça c'est l'erreur C0114/5/6: Docstring manquante
+
 import tkinter as tk
 
 

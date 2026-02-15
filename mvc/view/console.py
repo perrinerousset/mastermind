@@ -1,3 +1,9 @@
+"""
+Module de gestion de la vue du jeu Mastermind.
+Il permet d'afficher le jeu, les boutons de validation et
+les messages d'information de scores, du nombre de tentatives restantes...
+"""  # le ruff demande qu'on écrive ça c'est l'erreur C0114/5/6: Docstring manquante
+
 import tkinter as tk
 
 from mvc.model.historique import Historique

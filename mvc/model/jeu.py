@@ -1,3 +1,7 @@
+"""
+gestion de l'objet jeu et de ses attributs'
+"""  # le ruff demande qu'on écrive ça c'est l'erreur C0114/5/6: Docstring manquante
+
 from typing import Dict
 
 from .score import Score

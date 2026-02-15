@@ -22,23 +22,23 @@ class Couleur(Enum):
 
 class Mastermind:
     def __init__(self) -> None:
-        self.__ListeCouleur = list(Couleur)
-        self.__CombinaisonSecrete = []
+        self.__liste_couleur = list(Couleur)
+        self.__combinaison_secrete = []
         logger.debug("Initialisation du modèle Mastermind")
 
     @property
     def liste_couleur(self):
-        return self.__ListeCouleur
+        return self.__liste_couleur
 
     @property
     def combinaison_secrete_bis(self):
-        return self.__CombinaisonSecrete
+        return self.__combinaison_secrete
 
     def combinaison_secrete(self):
-        self.__CombinaisonSecrete = random.choices(self.__ListeCouleur, k=4)
+        self.__combinaison_secrete = random.choices(self.__liste_couleur, k=4)
         logger.debug(
             "Nouvelle combinaison secrète générée (DEBUG uniquement) : %s",
-            self.__CombinaisonSecrete,
+            self.__combinaison_secrete,
         )
 
     def verification_proposition(self, liste_proposition) -> Tuple[int, int]:
@@ -46,11 +46,11 @@ class Mastermind:
         rouges = 0
         blancs = 0
         if (
-            not self.__CombinaisonSecrete or len(self.__CombinaisonSecrete) != 4
+            not self.__combinaison_secrete or len(self.__combinaison_secrete) != 4
         ):  # ça beugait des fois :
             logger.warning("Tentative de vérification sans combinaison secrète valide.")
             return 0, 0
-        combi_secrete = list(self.__CombinaisonSecrete)
+        combi_secrete = list(self.__combinaison_secrete)
         liste_prop = list(liste_proposition)
         for i in range(4):
             if liste_prop[i] == combi_secrete[i]:
@@ -66,9 +66,9 @@ class Mastermind:
         return rouges, blancs
 
     def victoire(self, liste_proposition) -> bool:
-        return list(liste_proposition) == list(self.__CombinaisonSecrete)
+        return list(liste_proposition) == list(self.__combinaison_secrete)
 
     @combinaison_secrete_bis.setter
     def combinaison_secrete_bis(self, liste_enums):
         # on focre la combi secrete car sinon ba ça prend une nouvelle...
-        self.__CombinaisonSecrete = liste_enums
+        self.__combinaison_secrete = liste_enums

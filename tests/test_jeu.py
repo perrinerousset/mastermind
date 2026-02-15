@@ -1,3 +1,7 @@
+"""
+test pour jeu
+"""  # le ruff demande qu'on écrive ça c'est l'erreur C0114/5/6: Docstring manquante
+
 import pytest
 
 from mvc.model.jeu import Jeu
